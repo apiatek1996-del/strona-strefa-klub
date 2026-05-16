@@ -71,11 +71,11 @@ const Testimonials = () => {
               {item.type === 'text' ? (
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
                   <p className="text-slate-700 text-lg leading-relaxed italic mb-6">
-                    "{item.content.text}"
+                    "{item.content?.text}"
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="h-px w-8 bg-primary/30"></div>
-                    <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">{item.content.author}</span>
+                    <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">{item.content?.author}</span>
                   </div>
                 </div>
               ) : (
