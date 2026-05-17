@@ -1,15 +1,36 @@
-import { Check, Info } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
 const Pricing = () => {
+  const [annual, setAnnual] = useState(false);
+
   return (
     <section id="cennik" className="bg-white py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-normal text-slate-900 mb-6" style={{ fontFamily: 'var(--font-lora), serif' }}>
             Twoja inwestycja w siebie
           </h2>
           <p className="text-slate-600 text-lg">Wybierz opcję, która najlepiej pasuje do Twojego tempa nauki.</p>
+        </div>
+
+        {/* Toggle */}
+        <div className="flex items-center justify-center gap-4 mb-14">
+          <span className={`font-semibold text-sm transition-colors ${!annual ? "text-slate-900" : "text-slate-400"}`}>Miesięcznie</span>
+          <button
+            onClick={() => setAnnual(!annual)}
+            className={`relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none ${annual ? "bg-primary" : "bg-slate-300"}`}
+            aria-label="Przełącz na rozliczenie roczne"
+          >
+            <span className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 ${annual ? "translate-x-7" : "translate-x-0"}`} />
+          </button>
+          <span className={`font-semibold text-sm transition-colors ${annual ? "text-slate-900" : "text-slate-400"}`}>
+            Rocznie
+            <span className="ml-2 bg-emerald-100 text-emerald-700 text-[11px] font-black px-2 py-0.5 rounded-full uppercase tracking-wide">3 mies. gratis!</span>
+          </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-stretch">
@@ -29,7 +50,7 @@ const Pricing = () => {
               
               <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm mb-6">
                 <p className="text-slate-700 text-sm leading-relaxed italic">
-                  "Zamiast chaosu na Instagramie, dostajesz wyselekcjonowane perełki jak <span className="font-bold">Llego en nada</span> prosto na telefon. Mniej treści, więcej efektów."
+                  &quot;Zamiast chaosu na Instagramie, dostajesz wyselekcjonowane perełki jak <span className="font-bold">Llego en nada</span> prosto na telefon. Mniej treści, więcej efektów.&quot;
                 </p>
               </div>
             </div>
@@ -81,18 +102,39 @@ const Pricing = () => {
             </div>
             
             <div className="mb-8">
-              <div className="flex items-baseline gap-1 flex-wrap mb-4">
-                <span className="text-2xl font-bold text-slate-400 line-through mr-2">137 zł</span>
-                <span className="text-6xl font-black text-slate-900">87</span>
-                <span className="text-2xl font-bold text-slate-900">zł</span>
-                <span className="text-slate-600 font-medium ml-1">/ miesięcznie</span>
-              </div>
-              
-              <div className="bg-white rounded-2xl p-4 border border-orange-100 shadow-sm mb-6">
-                <p className="text-slate-800 text-sm leading-relaxed font-medium">
-                  Idealne jeśli chcesz nie tylko "otaczać się" językiem, ale też zrozumieć logikę (ściągawki) i słuchać nativów (podcasty).
-                </p>
-              </div>
+              {annual ? (
+                /* Annual pricing */
+                <div>
+                  <div className="flex items-baseline gap-1 flex-wrap mb-1">
+                    <span className="text-6xl font-black text-slate-900">783</span>
+                    <span className="text-2xl font-bold text-slate-900">zł</span>
+                    <span className="text-slate-600 font-medium ml-1">/ rok</span>
+                  </div>
+                  <p className="text-slate-500 text-sm mb-4">
+                    czyli tylko <span className="font-bold text-primary">65 zł/mies.</span>
+                    <span className="ml-2 line-through text-slate-400">zamiast 1044 zł</span>
+                  </p>
+                  <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-3 mb-6 flex items-center gap-2">
+                    <span className="text-emerald-600 text-xl">🎁</span>
+                    <p className="text-emerald-800 text-sm font-bold">3 miesiące gratis! Oszczędzasz 261 zł</p>
+                  </div>
+                </div>
+              ) : (
+                /* Monthly pricing */
+                <div>
+                  <div className="flex items-baseline gap-1 flex-wrap mb-4">
+                    <span className="text-2xl font-bold text-slate-400 line-through mr-2">137 zł</span>
+                    <span className="text-6xl font-black text-slate-900">87</span>
+                    <span className="text-2xl font-bold text-slate-900">zł</span>
+                    <span className="text-slate-600 font-medium ml-1">/ miesięcznie</span>
+                  </div>
+                  <div className="bg-white rounded-2xl p-4 border border-orange-100 shadow-sm mb-6">
+                    <p className="text-slate-800 text-sm leading-relaxed font-medium">
+                      Idealne jeśli chcesz nie tylko &quot;otaczać się&quot; językiem, ale też zrozumieć logikę (ściągawki) i słuchać nativów (podcasty).
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
 
             <ul className="space-y-4 mb-10 flex-grow">
@@ -121,10 +163,13 @@ const Pricing = () => {
             </ul>
 
             <Link 
-              href="https://ogarnij-hiszpanski.circle.so/checkout/strefa-hiszpanski"
+              href={annual
+                ? "https://ogarnij-hiszpanski.circle.so/checkout/strefa-hiszpanski-roczna"
+                : "https://ogarnij-hiszpanski.circle.so/checkout/strefa-hiszpanski"
+              }
               className="block w-full rounded-full py-5 text-center text-lg font-bold bg-primary text-white shadow-lg hover:bg-primary-dark hover:-translate-y-1 transition-all mt-auto"
             >
-              Dołączam do Strefy (87 zł)
+              {annual ? "Dołączam do Strefy (783 zł / rok)" : "Dołączam do Strefy (87 zł)"}
             </Link>
           </div>
         </div>
