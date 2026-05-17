@@ -53,7 +53,7 @@ const About = () => {
                 Ale najważniejsze są moje porażki.
               </p>
               <p>
-                Po 8 latach nauki ledwo wydukałam składne zdanie. Na Erasmusie, przed całą salą, chciałam pochwalić wykład o feminiźmie, który wtedy mnie zachwycił... i musiałam przejść na angielski, bo nikt mnie nie zrozumiał.
+                Po 8 latach nauki ledwo wydukałam składne zdanie. Na Erasmusie, przed całą salą, chciałam powiedzieć kilka miłych słów po wykładzie, który mnie zachwycił... i musiałam przejść na angielski, bo nikt mnie nie zrozumiał.
               </p>
               <p className="font-bold text-slate-900 bg-orange-50 p-4 rounded-xl border border-orange-100">
                 Największy wstyd w moim życiu.
