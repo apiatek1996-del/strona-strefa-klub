@@ -16,7 +16,7 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto items-stretch">
           {/* Option 1: Klub Hiszpański */}
-          <div className="relative rounded-[2rem] bg-slate-50 p-8 md:p-10 border-2 border-slate-100 shadow-sm transition-all hover:shadow-md flex flex-col">
+          <div className="order-2 md:order-1 relative rounded-[2rem] bg-slate-50 p-8 md:p-10 border-2 border-slate-100 shadow-sm transition-all hover:shadow-md flex flex-col">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Klub Hiszpański</h3>
               <p className="text-slate-500 font-medium italic">Codzienna dawka żywego języka</p>
@@ -69,7 +69,7 @@ const Pricing = () => {
           </div>
 
           {/* Option 2: Cała Strefa */}
-          <div className="relative rounded-[2rem] bg-primary-light p-8 md:p-10 shadow-2xl border-2 border-primary z-10 flex flex-col md:scale-105">
+          <div className="order-1 md:order-2 relative rounded-[2rem] bg-primary-light p-8 md:p-10 shadow-2xl border-2 border-primary z-10 flex flex-col md:scale-105">
             <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white font-bold px-6 py-1.5 rounded-full text-sm uppercase tracking-wider shadow-lg whitespace-nowrap">
               Najlepszy wybór • Rekomendujemy
             </div>
