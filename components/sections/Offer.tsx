@@ -121,6 +121,11 @@ const Offer = () => {
           <div className="mt-8 pt-8 border-t border-slate-200/60 text-center">
             <p className="text-slate-600 font-medium">Łączna wartość materiałów:</p>
             <p className="text-3xl md:text-4xl font-black text-slate-900 mt-2">1100+ zł <span className="text-xl font-bold text-slate-600">miesięcznie</span></p>
+            <div className="mt-4">
+              <span className="inline-block bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm md:text-base font-semibold px-4 py-2 rounded-full shadow-sm">
+                A Ty dostajesz to wszystko za jedyne <span className="text-emerald-600 font-extrabold text-lg md:text-xl">87 zł</span> / miesięcznie!
+              </span>
+            </div>
           </div>
         </div>
 
