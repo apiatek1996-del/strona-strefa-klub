@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import PainPoints from "@/components/sections/PainPoints";
 import Solution from "@/components/sections/Solution";
@@ -41,8 +40,8 @@ export default function Home() {
                   {[
                     "Puszczasz serial hiszpański i rozumiesz żarty, które wcześniej Ci uciekały",
                     "Wpadasz na 10 minut do Strefy i wychodzisz z nowym wyrażeniem, które od razu chcesz użyć",
-                    "Masz wreszcie poczucie, że hiszpański „żyje\" w Twoim dniu, a nie tylko na zajęciach",
-                    "Słyszysz rozmowę na ulicy i myślisz: „o, to wyrażenie znam ze Strefy!\""
+                    "Masz wreszcie poczucie, że hiszpański „żyje” w Twoim dniu, a nie tylko na zajęciach",
+                    "Słyszysz rozmowę na ulicy i myślisz: „o, to wyrażenie znam ze Strefy!”"
                   ].map((text, i) => (
                     <li key={i} className="flex items-start gap-4">
                       <span className="text-2xl mt-0.5">✨</span>

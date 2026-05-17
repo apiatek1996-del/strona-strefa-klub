@@ -23,7 +23,7 @@ const Features = () => {
     <section id="korzysci" className="bg-[#FFC53D] py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-primary font-bold tracking-wider uppercase mb-3">Metoda „codziennego zanurzenia"</p>
+          <p className="text-primary font-bold tracking-wider uppercase mb-3">Metoda „codziennego zanurzenia”</p>
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-normal text-slate-900 mb-6">
             3 filary, które robią robotę
           </h2>
@@ -49,11 +49,11 @@ const Features = () => {
         <div className="mt-16 max-w-3xl mx-auto space-y-8 text-center text-lg md:text-xl leading-relaxed">
           <p className="text-slate-700">
             <span className="text-primary font-bold block mb-1">Po kilku tygodniach:</span>
-            Oglądasz "La Casa de Papel" i nagle łapiesz żart, którego miesiąc temu byś nie zrozumiała.
+            Oglądasz &quot;La Casa de Papel&quot; i nagle łapiesz żart, którego miesiąc temu byś nie zrozumiała.
           </p>
           <p className="text-slate-700">
             <span className="text-primary font-bold block mb-1">Po 2 miesiącach:</span>
-            Twoja hiszpańska koleżanka z pracy mówi: <em>"Oye, hablas mucho mejor"</em> (słuchaj, mówisz dużo lepiej).
+            Twoja hiszpańska koleżanka z pracy mówi: <em>&quot;Oye, hablas mucho mejor&quot;</em> (słuchaj, mówisz dużo lepiej).
           </p>
         </div>
 

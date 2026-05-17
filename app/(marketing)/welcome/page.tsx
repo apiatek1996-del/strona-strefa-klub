@@ -1,7 +1,6 @@
 "use client";
 
-import { CheckCircle2, Laptop, Phone, ArrowRight, ExternalLink, Mail, MessageSquare } from "lucide-react";
-import Link from "next/link";
+import { CheckCircle2, Laptop, Phone, ArrowRight, Mail, MessageSquare } from "lucide-react";
 
 export default function WelcomePage() {
   return (

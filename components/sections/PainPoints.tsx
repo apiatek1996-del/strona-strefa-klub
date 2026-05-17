@@ -9,10 +9,10 @@ const PainPoints = () => {
           
           <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
             <p>
-              „Częsty kontakt z językiem", „zanurzenie się w hiszpańskim" — brzmi jak kolejny marketing bullshit, prawda? Ja też tak myślałam.
+              „Częsty kontakt z językiem”, „zanurzenie się w hiszpańskim” — brzmi jak kolejny marketing bullshit, prawda? Ja też tak myślałam.
             </p>
             <p>
-              Miałam 8 lat nauki za sobą i dalej mówiłam… trochę jak robot. Wiedziałam, że „trzeba więcej kontaktu z językiem", ale co to konkretnie znaczy? Duolingo codziennie? Włączanie hiszpańskich filmów w tle?
+              Miałam 8 lat nauki za sobą i dalej mówiłam… trochę jak robot. Wiedziałam, że „trzeba więcej kontaktu z językiem”, ale co to konkretnie znaczy? Duolingo codziennie? Włączanie hiszpańskich filmów w tle?
             </p>
             <p className="font-bold text-xl text-primary mt-8 mb-4">A potem coś kliknęło...</p>
             <p>

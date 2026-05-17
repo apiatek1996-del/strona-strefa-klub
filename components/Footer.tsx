@@ -13,7 +13,7 @@ const Footer = () => {
               Agata Piątek — Ekspertka od Hiszpańskiego dla Polaków w Hiszpanii
             </h3>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-4">
-              Mieszkam w Hiszpanii i pomagam Polakom przejść od <span className="text-primary italic font-handwriting">"Hola, buenos días"</span> do swobodnych rozmów przy kawie bez stresu.
+              Mieszkam w Hiszpanii i pomagam Polakom przejść od <span className="text-primary italic font-handwriting">&quot;Hola, buenos días&quot;</span> do swobodnych rozmów przy kawie bez stresu.
             </p>
             <p className="text-slate-600 text-sm md:text-base">
               Magistra filologii hiszpańskiej, 8 lat doświadczenia w nauczaniu.

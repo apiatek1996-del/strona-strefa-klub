@@ -31,7 +31,7 @@ const Pricing = () => {
 
               <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm mb-6">
                 <p className="text-slate-700 text-sm leading-relaxed italic">
-                  "Zamiast chaosu na Instagramie, dostajesz wyselekcjonowane perełki jak <span className=\"font-bold\">Llego en nada</span> prosto na telefon. Mniej treści, więcej efektów."
+                  &quot;Zamiast chaosu na Instagramie, dostajesz wyselekcjonowane perełki jak <span className="font-bold">Llego en nada</span> prosto na telefon. Mniej treści, więcej efektów.&quot;
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ const Pricing = () => {
 
               <div className="bg-white rounded-2xl p-4 border border-orange-100 shadow-sm mb-6">
                 <p className="text-slate-800 text-sm leading-relaxed font-medium">
-                  Idealne jeśli chcesz nie tylko \"otaczać się\" językiem, ale też zrozumieć logikę (ściągawki) i słuchać nativów (podcasty).
+                  Idealne jeśli chcesz nie tylko &quot;otaczać się&quot; językiem, ale też zrozumieć logikę (ściągawki) i słuchać nativów (podcasty).
                 </p>
               </div>
             </div>

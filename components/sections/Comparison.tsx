@@ -71,7 +71,7 @@ const Comparison = () => {
             <h3 className="text-2xl font-bold text-slate-900 mb-6">Prawdziwy hiszpański zaczyna się tam, gdzie kończą się podręczniki</h3>
             <p className="text-slate-600 leading-relaxed mb-8">
               Prawdziwy hiszpański z życia zaczyna się na <span className="bg-secondary/30 px-2 py-0.5 rounded font-mono font-bold text-slate-800">LLEGO EN NADA</span> albo <span className="bg-secondary/30 px-2 py-0.5 rounded font-mono font-bold text-slate-800">ESTOY DONDE MARIA</span>. 
-              To wyrażenia, które dosłownie ratują życie w rozmowie, a których nie znajdziesz na typowych kontach na Instagramie, bo nie są tak „klikalne" jak przekleństwa. 
+              To wyrażenia, które dosłownie ratują życie w rozmowie, a których nie znajdziesz na typowych kontach na Instagramie, bo nie są tak „klikalne” jak przekleństwa. 
               W Klubie skupiamy się na tym, co sprawi, że Twój hiszpański wskoczy na poziom ekspercki.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

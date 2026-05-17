@@ -1,4 +1,3 @@
-import { Star } from "lucide-react";
 
 const Testimonials = () => {
   // Punchy short screenshots
@@ -71,7 +70,7 @@ const Testimonials = () => {
               {item.type === 'text' ? (
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
                   <p className="text-slate-700 text-lg leading-relaxed italic mb-6">
-                    "{item.content?.text}"
+                    &quot;{item.content?.text}&quot;
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="h-px w-8 bg-primary/30"></div>

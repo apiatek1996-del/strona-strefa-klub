@@ -59,7 +59,7 @@ const About = () => {
                 Największy wstyd w moim życiu.
               </p>
               <p>
-                I właśnie dlatego wiem, gdzie tkwi problem. Nie w braku talentu. Nie w „trudnym języku". W metodzie.
+                I właśnie dlatego wiem, gdzie tkwi problem. Nie w braku talentu. Nie w „trudnym języku”. W metodzie.
               </p>
               <p>
                 Większość kursów i podręczników uczy Cię hiszpańskiego do podstawowej komunikacji. Ja uczę żywego języka — tego, który podchwycisz przy stoliku w hiszpańskiej kawiarni, albo którym zagada do Ciebie sąsiadka na Airbnb w Barcelonie.
