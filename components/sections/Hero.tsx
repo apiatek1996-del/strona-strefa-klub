@@ -15,7 +15,7 @@ const Hero = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12">
             
             {/* Text Content */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
 
             {/* Image area with Mockup */}
-            <div className="w-full lg:w-1/2 relative flex justify-center items-center mt-12 lg:mt-0 min-h-[400px]">
+            <div className="w-full lg:w-1/2 relative flex justify-center items-center mt-2 lg:mt-0 min-h-[250px] sm:min-h-[400px]">
               <div className="relative w-full max-w-lg">
                 {/* Mockup Platformy */}
                 <div className="relative z-10 transform -rotate-2 hover:rotate-0 transition-transform duration-700">
