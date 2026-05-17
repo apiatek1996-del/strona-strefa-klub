@@ -13,7 +13,7 @@ const FAQ = () => {
     },
     {
       question: "Czy mogę zrezygnować w dowolnym momencie?",
-      answer: "Tak, oczywiście! Subskrypcja jest odnawiana co miesiąc (lub co rok w planie rocznym). Możesz anulować ją jednym kliknięciem w panelu użytkownika, bez żadnych pytań."
+      answer: "Tak, oczywiście! Subskrypcja jest odnawiana co miesiąc. Możesz anulować ją jednym kliknięciem w panelu użytkownika, bez żadnych pytań."
     },
     {
       question: "Czy Strefa zastępuje kurs językowy?",
