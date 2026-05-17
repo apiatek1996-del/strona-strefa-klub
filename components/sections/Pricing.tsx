@@ -22,7 +22,7 @@ const Pricing = () => {
             
             <div className="mb-8">
               <div className="flex items-baseline gap-1 mb-4">
-                <span className="text-5xl font-black text-slate-900">49</span>
+                <span className="text-5xl font-black text-slate-900">59</span>
                 <span className="text-xl font-bold text-slate-900">zł</span>
                 <span className="text-slate-500 font-medium ml-1">/ miesięcznie</span>
               </div>
@@ -59,10 +59,10 @@ const Pricing = () => {
             </ul>
 
             <Link 
-              href="https://buy.stripe.com/5kQ9ATbY0208dDQ84KeUU04?locale=pl"
+              href="https://ogarnij-hiszpanski.circle.so/checkout/klub-hiszpanski-todos-los-dias-oficial"
               className="block w-full rounded-full py-4 text-center font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all mt-auto"
             >
-              Wybieram Klub (49 zł)
+              Wybieram Klub (59 zł)
             </Link>
           </div>
 
@@ -83,7 +83,7 @@ const Pricing = () => {
             <div className="mb-8">
               <div className="flex items-baseline gap-1 flex-wrap mb-4">
                 <span className="text-2xl font-bold text-slate-400 line-through mr-2">137 zł</span>
-                <span className="text-6xl font-black text-slate-900">77</span>
+                <span className="text-6xl font-black text-slate-900">87</span>
                 <span className="text-2xl font-bold text-slate-900">zł</span>
                 <span className="text-slate-600 font-medium ml-1">/ miesięcznie</span>
               </div>
@@ -121,10 +121,10 @@ const Pricing = () => {
             </ul>
 
             <Link 
-              href="https://buy.stripe.com/eVq4gzgeg8ow6bo5WCeUU05?locale=pl"
+              href="https://ogarnij-hiszpanski.circle.so/checkout/strefa-hiszpanski"
               className="block w-full rounded-full py-5 text-center text-lg font-bold bg-primary text-white shadow-lg hover:bg-primary-dark hover:-translate-y-1 transition-all mt-auto"
             >
-              Dołączam do Strefy (77 zł)
+              Dołączam do Strefy (87 zł)
             </Link>
           </div>
         </div>
