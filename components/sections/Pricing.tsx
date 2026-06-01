@@ -62,6 +62,15 @@ const Pricing = () => {
               href="https://ogarnij-hiszpanski.circle.so/checkout/klub-hiszpanski-todos-los-dias-oficial"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                if (typeof window !== "undefined" && (window as any).fbq) {
+                  (window as any).fbq('track', 'InitiateCheckout', {
+                    content_name: 'Klub Hiszpański',
+                    value: 59.00,
+                    currency: 'PLN'
+                  });
+                }
+              }}
               className="block w-full rounded-full py-4 text-center font-bold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all mt-auto"
             >
               Wybieram Klub (59 zł)
@@ -126,6 +135,15 @@ const Pricing = () => {
               href="https://ogarnij-hiszpanski.circle.so/checkout/strefa-hiszpanski"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                if (typeof window !== "undefined" && (window as any).fbq) {
+                  (window as any).fbq('track', 'InitiateCheckout', {
+                    content_name: 'Cała Strefa',
+                    value: 87.00,
+                    currency: 'PLN'
+                  });
+                }
+              }}
               className="block w-full rounded-full py-5 text-center text-lg font-bold bg-primary text-white shadow-lg hover:bg-primary-dark hover:-translate-y-1 transition-all mt-auto"
             >
               Dołączam do Strefy (87 zł)

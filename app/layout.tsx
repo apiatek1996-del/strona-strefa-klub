@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Lora } from "next/font/google";
 import "./globals.css";
+import MetaPixel from "../components/MetaPixel";
 
 const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className={`${montserrat.variable} ${lora.variable} font-sans antialiased`} suppressHydrationWarning>
+        <MetaPixel />
         {children}
       </body>
     </html>
