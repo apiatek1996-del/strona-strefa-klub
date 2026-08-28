@@ -43,7 +43,7 @@ const Hero = () => {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <div className="flex items-center justify-center gap-2 text-slate-700 text-sm font-medium">
-                  <span>+ bonus 15 promptów AI</span>
+                  <span>+ bonus → 15 promptów do pracy z AI dzięki którym nawet jeśli nie mieszkasz w Hiszpanii od razu możesz zacząć wykorzystywać to czego się nauczyłaś</span>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ const Hero = () => {
 
                 {/* Decorative sticker */}
                 <div className="absolute -top-6 -left-6 z-30 bg-white p-3 rounded-2xl shadow-xl border border-slate-100 rotate-12 hidden sm:block">
-                  <p className="text-xs font-black text-primary uppercase tracking-tighter">Ponad 400 lekcji!</p>
+                  <p className="text-xs font-black text-primary uppercase tracking-tighter">Ponad 400 wpisów!</p>
                 </div>
               </div>
             </div>
