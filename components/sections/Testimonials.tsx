@@ -5,7 +5,6 @@ const Testimonials = () => {
     "/testimonials/t1.jpg",
     "/testimonials/t3.jpg",
     "/testimonials/t4.jpg",
-    "/testimonials/t10.jpg",
     "/testimonials/t12.jpg",
     "/testimonials/t13.jpg",
     "/testimonials/t14.jpg",
@@ -27,7 +26,7 @@ const Testimonials = () => {
       author: "Kursantka"
     },
     {
-      text: "Cenne są te rzeczy „z życia”, bo to pokazuje, że ten hiszpański naprawdę żyje i dużo fajnych rzeczy się w nim dzieje.",
+      text: "Cenne są te rzeczy „z życia", bo to pokazuje, że ten hiszpański naprawdę żyje i dużo fajnych rzeczy się w nim dzieje.",
       author: "Członkini Społeczności"
     },
   ];
@@ -44,7 +43,6 @@ const Testimonials = () => {
     { type: 'image', src: screenshotImages[3] },
     { type: 'image', src: screenshotImages[4] },
     { type: 'image', src: screenshotImages[5] },
-    { type: 'image', src: screenshotImages[6] },
   ];
 
   return (
