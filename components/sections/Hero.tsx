@@ -28,7 +28,7 @@ const Hero = () => {
                 Ekosystem do samodzielnej nauki
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-black tracking-tight mb-6 leading-[1.1]" style={{ fontFamily: 'var(--font-lora), serif' }}>
-                Oglądasz hiszpański serial i nie wiesz, na co masz zwracać uwagę
+                Oglądasz hiszpański serial i nie wiesz, na co dokładnie masz zwrócić uwagę
               </h1>
               <p className="text-xl sm:text-2xl text-slate-800 font-handwriting italic mb-8">
                 Ja wiem. I codziennie wybieram to za Ciebie.
