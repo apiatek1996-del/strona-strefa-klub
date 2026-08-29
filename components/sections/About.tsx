@@ -21,7 +21,7 @@ const About = () => {
               
               <div className="relative aspect-[4/5] w-full max-w-md rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-slate-100 z-10">
                 <img 
-                  src="/main-photo.png" 
+                  src="/photo_mug.jpg" 
                   alt="Agata - Twoja mentorka" 
                   className="w-full h-full object-cover object-top"
                 />
