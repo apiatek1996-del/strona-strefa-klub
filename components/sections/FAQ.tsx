@@ -8,24 +8,32 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Dla jakiego poziomu przeznaczona jest platforma?",
-      answer: "Strefa Hiszpański jest idealna dla osób na poziomie od A1+ (znających absolutne podstawy) do B2. Moduły są podzielone tak, by każdy znalazł odpowiednie wyzwania dla siebie."
-    },
-    {
-      question: "Czy mogę zrezygnować w dowolnym momencie?",
-      answer: "Tak, oczywiście! Subskrypcja jest odnawiana co miesiąc. Możesz anulować ją jednym kliknięciem w panelu użytkownika, bez żadnych pytań."
+      question: "Dla jakiego poziomu jest Strefa?",
+      answer: "Od A1+ do B2. Jeśli znasz absolutne podstawy — potrafisz przeczytać proste zdanie i rozpoznać czasy — będziesz miała z czego korzystać. Jeśli zaczynasz od zera, najpierw potrzebujesz kursu podstaw, a Strefa ma sens dopiero potem."
     },
     {
       question: "Czy Strefa zastępuje kurs językowy?",
-      answer: "Nie. Strefa to nie jest klasyczny kurs „od lekcji 1 do 20”. To ekosystem do codziennej nauki, który ma uzupełnić Twoją wiedzę, dać Ci kontakt z żywym językiem i pomóc przełamać barierę w mówieniu. Jeśli potrzebujesz podstaw od zera (A0), zacznij od kursu podstawowego, a potem dołącz do nas!"
+      answer: "Nie. Kurs uczy Cię systemu — gramatyki, struktur, kolejności. Strefa daje Ci to, czego kurs nie da: żywy język, którym ludzie faktycznie mówią, i codzienny kontakt między zajęciami. To dwie różne rzeczy, które razem działają najlepiej."
     },
     {
-      question: "Czy potrzebuję dodatkowych podręczników?",
-      answer: "Nie! Platforma zawiera wszystko, czego potrzebujesz: materiały wideo, audio, interaktywne ćwiczenia słownictwa i transkrypcje. Uczymy się z materiałów autentycznych."
+      question: "Co dostaję jako bonus?",
+      answer: `Poza codziennym wyrażeniem dostajesz: „Zasłyszane na ulicy" — co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco; ściągawki do pobrania — gramatyka wytłumaczona logicznie, do wydrukowania albo trzymania w telefonie; 15 promptów do AI (wartość 97 zł) — gotowe instrukcje, dzięki którym ChatGPT staje się partnerem do ćwiczenia hiszpańskiego, a nie tylko tłumaczem; dostęp do forum — możesz znaleźć tam osobę do ćwiczenia, czyli tandem językowy; archiwum ponad 400 wpisów — masz do niego dostęp od pierwszego dnia. A wkrótce dochodzą podcasty, karty pracy do seriali i kursy gramatyczne — bez dopłaty, w tej samej cenie.`
     },
     {
-      question: "Ile czasu dziennie muszę poświęcić na naukę?",
-      answer: "Nasza metoda zakłada systematyczność. Sugerujemy minimum 15-20 minut dziennie. Krótkie codzienne sesje przynoszą znacznie lepsze efekty niż jednorazowe, kilkugodzinne siedzenie nad książkami."
+      question: "Czy potrzebuję podręczników albo dodatkowych materiałów?",
+      answer: "Nie. Wszystko jest w środku, gotowe. Ściągawki do pobrania, wyrażenia z wyjaśnieniem, archiwum. Nie musisz nic dokupować ani szukać."
+    },
+    {
+      question: "Ile czasu dziennie muszę poświęcić?",
+      answer: "10 minut wystarczy. Materiał wchodzi od poniedziałku do piątku, więc możesz to robić przy kawie albo w drodze. Jeśli któregoś dnia odpuścisz, nic nie przepada — wszystko zostaje w archiwum."
+    },
+    {
+      question: "Czy mogę zrezygnować w dowolnym momencie?",
+      answer: "Tak, jednym kliknięciem. Bez wypowiedzenia, bez pytań, bez tłumaczenia się. Pierwsze 3 dni są za darmo, więc możesz sprawdzić od środka, zanim cokolwiek zapłacisz."
+    },
+    {
+      question: "Co jeśli mam pytanie do konkretnego wyrażenia?",
+      answer: "Piszesz pod postem, odpowiadam osobiście. To jest część Strefy, nie dodatek."
     }
   ];
 

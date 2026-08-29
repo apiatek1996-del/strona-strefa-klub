@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prezentacja: Jak działa GUSTAR?</title>
+  
+  <!-- Google Fonts: Lora (headings) & Montserrat (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            heading: ['Lora', 'serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#EF5824',
+              dark: '#D94818',
+            },
+            secondary: {
+              DEFAULT: '#DFADF4',
+              dark: '#C68FE0',
+            },
+            accent: {
+              DEFAULT: '#5568FE',
+              dark: '#4354E6',
+            },
+            emeraldCustom: {
+              DEFAULT: '#065f46',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #F9FAFB;
+      color: #1F2937;
+    }
+    
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Lora', serif;
+    }
+
+    .slide {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        overflow: visible !important;
+      }
+      #presentation-container {
+        height: auto !important;
+        overflow: visible !important;
+      }
+      .slide {
+        display: flex !important;
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-after: always;
+        height: 100vh !important;
+        justify-content: center;
+        align-items: center;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="overflow-hidden h-screen flex flex-col justify-between select-none">
+
+  <!-- Background Blobs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] bg-secondary/15 rounded-full blur-[140px]"></div>
+    <div class="absolute top-[30%] right-[15%] w-[35vw] h-[35vw] bg-accent/5 rounded-full blur-[100px]"></div>
+  </div>
+
+  <!-- Main Container -->
+  <div id="presentation-container" class="relative z-10 flex-grow flex items-center justify-center p-4 md:p-8">
+    
+    <!-- ─── SLAJD 1: TYTUŁOWY ─── -->
+    <div class="slide hidden w-full max-w-5xl h-[75vh] flex-col justify-center text-center px-6" id="slide-0">
+      <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-8">
+        Jak działa <span class="text-primary underline decoration-wavy decoration-secondary decoration-2 underline-offset-8">GUSTAR</span>?
+      </h1>
+      <p class="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto font-medium">
+        Tłumaczymy jako <strong class="text-slate-900 font-bold">LUBIĆ</strong>, ale gramatycznie działa tak jak <strong class="text-primary font-extrabold">PODOBAĆ SIĘ</strong>.
+      </p>
+    </div>
+
+    <!-- ─── SLAJD 2: ZROZUMIEĆ MECHANIZM ─── -->
+    <div class="slide hidden w-full max-w-4xl flex-col justify-center" id="slide-1">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
+        Lubić vs Podobać się
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-6">
+        <!-- PL -->
+        <div class="bg-white/80 border border-white/50 backdrop-blur shadow-md rounded-3xl p-6">
+          <h3 class="text-2xl font-black text-slate-700 mb-4">(Ja) lubię Kasię</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Podmiotem jestem <strong class="text-slate-800">JA</strong>. Ja wykonuję czynność lubienia.
+          </p>
+        </div>
+
+        <!-- ES -->
+        <div class="bg-white/80 border border-white/50 backdrop-blur shadow-md rounded-3xl p-6">
+          <h3 class="text-2xl font-black text-slate-700 mb-4">(Ja) podobam się Kasi</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Podmiotem nadal jestem <strong class="text-slate-800">JA</strong>, ale zdanie ma zupełnie inne znaczenie!
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center max-w-2xl mx-auto">
+        <p class="text-lg text-slate-800">
+          Chcesz powiedzieć <strong class="text-primary font-bold">LUBIĘ KASIĘ</strong>?
+        </p>
+        <p class="text-xl font-bold text-slate-900 mt-2">
+          👉 Kasia MI SIĘ PODOBA
+        </p>
+        <span class="text-xs text-slate-400 block mt-2">(najłatwiej na początku wychodzić od PODOBAĆ SIĘ, zamiast od LUBIĆ)</span>
+      </div>
+    </div>
+
+    <!-- ─── SLAJD 3: ODMIANA ─── -->
+    <div class="slide hidden w-full max-w-4xl flex-col justify-center" id="slide-2">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
+        GUSTAR odmienia się REGULARNIE
+      </h2>
+
+      <div class="bg-white/80 border border-white/50 shadow-xl rounded-3xl p-8 max-w-md mx-auto w-full text-center">
+        <ul class="space-y-3 font-mono text-3xl font-semibold tracking-wider text-slate-800">
+          <li>gust<strong class="text-primary font-black">o</strong></li>
+          <li>gust<strong class="text-primary font-black">as</strong></li>
+          <li>gust<strong class="text-primary font-black">a</strong></li>
+          <li>gust<strong class="text-primary font-black">amos</strong></li>
+          <li>gust<strong class="text-primary font-black">ais</strong></li>
+          <li>gust<strong class="text-primary font-black">an</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ─── SLAJD 4: KOMU LUB CZEMU? (ZAIMKI) ─── -->
+    <div class="slide hidden w-full max-w-4xl flex-col justify-center" id="slide-3">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+        Komu? Czemu się podoba? (Celownik)
+      </h2>
+      <p class="text-center text-slate-500 mb-8">
+        Stawiamy je zawsze **przed** czasownikiem GUSTAR:
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8">
+        <div class="bg-white/80 border border-white/50 shadow-md rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-accent mb-1">me</div>
+          <div class="text-xs text-slate-500">mnie / mi</div>
+        </div>
+        <div class="bg-white/80 border border-white/50 shadow-md rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-accent mb-1">te</div>
+          <div class="text-xs text-slate-500">tobie / ci</div>
+        </div>
+        <div class="bg-white/80 border border-white/50 shadow-md rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-accent mb-1">le</div>
+          <div class="text-xs text-slate-500">jej / jemu</div>
+        </div>
+        <div class="bg-white/80 border border-white/50 shadow-md rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-accent mb-1">nos</div>
+          <div class="text-xs text-slate-500">nam</div>
+        </div>
+        <div class="bg-white/80 border border-white/50 shadow-md rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-accent mb-1">os</div>
+          <div class="text-xs text-slate-500">wam</div>
+        </div>
+        <div class="bg-white/80 border border-white/50 shadow-md rounded-2xl p-4 text-center">
+          <div class="text-3xl font-black text-accent mb-1">les</div>
+          <div class="text-xs text-slate-500">im</div>
+        </div>
+      </div>
+
+      <div class="space-y-2 text-center font-mono text-lg text-slate-800">
+        <div>me gusta marihuana <span class="text-slate-400 text-sm">→ mi podoba się marihuana (lubię)</span></div>
+        <div>me gustas tú <span class="text-slate-400 text-sm">→ mi podobasz się ty</span></div>
+      </div>
+    </div>
+
+    <!-- ─── SLAJD 5: PRZYKŁADY I ZMIANA FORMY ─── -->
+    <div class="slide hidden w-full max-w-5xl flex-col justify-center" id="slide-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
+        Kiedy zmienia się forma GUSTAR?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- 3. osoba (stała forma gusta) -->
+        <div class="bg-white/80 border border-white/50 rounded-3xl p-6">
+          <h3 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Gdy podoba się 3. osoba (rzecz, czynność)</h3>
+          <ul class="space-y-2 font-mono text-sm text-slate-700">
+            <li>Lubię Kasię → MI PODOBA SIĘ KASIA → <strong>ME GUSTA Kasia</strong></li>
+            <li>On lubi spać → JEMU PODOBA SIĘ SPANIE → <strong>LE GUSTA dormir</strong></li>
+            <li>Wy lubicie czerwony samochód → <strong>OS GUSTA el coche rojo</strong></li>
+            <li>Oni lubią tego kota → <strong>LES GUSTA este gato</strong></li>
+          </ul>
+        </div>
+
+        <!-- Inna osoba (zmiana formy) -->
+        <div class="bg-white/80 border-2 border-primary/20 rounded-3xl p-6">
+          <h3 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Gdy podoba się inna osoba (odmiana)</h3>
+          <ul class="space-y-3 font-mono text-sm text-slate-800">
+            <li>Lubię Ciebie → MI PODOBASZ SIĘ TY → <strong class="text-primary">me gustas tú</strong></li>
+            <li>Oni mnie lubią → IM PODOBA SIĘ ja → <strong class="text-primary">les gusto yo</strong></li>
+            <li>Czy ty ich lubisz? → CZY CI PODOBAJĄ się oni? → <strong class="text-primary">te gustan ellos?</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLAJD 6: METAFORA MURU ─── -->
+    <div class="slide hidden w-full max-w-5xl flex-col justify-center" id="slide-5">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center">
+        Metafora Muru
+      </h2>
+
+      <div class="relative bg-white/40 border border-dashed border-slate-300 rounded-[2rem] p-6 min-h-[380px] flex flex-col md:flex-row justify-between items-stretch gap-6">
+        <!-- Przed Murem -->
+        <div class="flex-1 bg-white/90 border border-white/50 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-black text-primary mb-1">PRZED MUREM</h3>
+            <p class="text-slate-500 text-sm mb-4">KTO lubi / KOMU się podoba</p>
+            <ul class="font-mono text-xs text-slate-400 space-y-1">
+              <li>me (mi/mnie)</li>
+              <li>te (ci/tobie)</li>
+              <li>le (jej/jemu)</li>
+              <li>nos (nam)</li>
+              <li>os (wam)</li>
+              <li>les (im)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mur -->
+        <div class="w-full md:w-1/4 min-h-[100px] md:min-h-full bg-primary/10 border-2 border-dashed border-primary rounded-2xl flex flex-col items-center justify-center text-center p-4">
+          <span class="text-4xl mb-1">🧱</span>
+          <span class="text-xs font-bold text-primary uppercase tracking-widest">MUR</span>
+        </div>
+
+        <!-- Za Murem -->
+        <div class="flex-1 bg-white/90 border border-white/50 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-black text-accent mb-1">ZA MUREM</h3>
+            <p class="text-slate-500 text-sm mb-4">CO lub KTO się podoba</p>
+            <ul class="font-mono text-xs text-slate-400 space-y-1">
+              <li>GUSTO</li>
+              <li>GUSTAS</li>
+              <li>GUSTA</li>
+              <li>GUSTAMOS</li>
+              <li>GUSTAIS</li>
+              <li>GUSTAN</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLAJD 7: PRZECZENIA ─── -->
+    <div class="slide hidden w-full max-w-4xl flex-col justify-center" id="slide-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
+        Przeczenia: Czegoś NIE lubimy
+      </h2>
+
+      <div class="bg-white/80 border border-white/50 shadow-xl rounded-[2rem] p-8 max-w-2xl mx-auto w-full">
+        <p class="text-lg text-slate-700 text-center mb-6">
+          Wstawiamy <strong class="text-primary text-2xl font-black">NO</strong> na samym początku (przed zaimek):
+        </p>
+
+        <div class="flex justify-center items-center gap-4 text-2xl font-mono mb-8">
+          <span class="text-primary font-bold">no</span>
+          <span class="text-slate-400">→</span>
+          <span class="text-accent font-bold">me / te / le...</span>
+          <span class="text-slate-400">| 🧱 |</span>
+          <span class="font-bold">GUSTAR</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-sm text-slate-700">
+          <div>lubię Marysię → <strong>me gusta Marysia</strong></div>
+          <div class="text-primary font-semibold">nie lubię Marysi → <strong>no me gusta Marysia</strong></div>
+          <div>wy lubicie nas → <strong>os gustamos</strong></div>
+          <div class="text-primary font-semibold font-semibold">nie lubicie nas → <strong>no os gustamos</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLAJD 8: LITERKA "A" ─── -->
+    <div class="slide hidden w-full max-w-4xl flex-col justify-center" id="slide-7">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center">
+        Konkretna osoba: Dodaj "A"
+      </h2>
+      <p class="text-center text-slate-500 mb-8 max-w-xl mx-auto text-sm">
+        W hiszpańskim nie ma przypadków. Gdy wskazujesz konkretną osobę (Marysię, ojców), przed nią musisz dodać <strong class="text-primary font-bold">A</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-sm">
+        <div class="bg-white/80 p-5 rounded-2xl shadow-sm border border-slate-100">
+          <span class="text-xs uppercase text-slate-400 block mb-2">Marysia</span>
+          <span class="text-primary font-bold block">A Marysia le gusta bailar</span>
+          <span class="text-slate-400 text-xs block mt-2">(Marysi podoba się tańczenie)</span>
+        </div>
+
+        <div class="bg-white/80 p-5 rounded-2xl shadow-sm border border-slate-100">
+          <span class="text-xs uppercase text-slate-400 block mb-2">Moja przyjaciółka</span>
+          <span class="text-primary font-bold block">A mi amiga le gustan las flores</span>
+          <span class="text-slate-400 text-xs block mt-2">(Mojej przyjaciółce podobają się kwiatki)</span>
+        </div>
+
+        <div class="bg-white/80 p-5 rounded-2xl shadow-sm border border-slate-100">
+          <span class="text-xs uppercase text-slate-400 block mb-2">Rodzice</span>
+          <span class="text-primary font-bold block">A los padres les gusta el fútbol</span>
+          <span class="text-slate-400 text-xs block mt-2">(Ojcom podoba się piłka nożna)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLAJD 9: PEŁNA KONSTRUKCJA + TEST ─── -->
+    <div class="slide hidden w-full max-w-5xl flex-col justify-center" id="slide-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center">
+        Pełna konstrukcja & Ćwiczenie
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <!-- Schemat -->
+        <div class="bg-white/80 border border-white/50 rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Pełna ścieżka:</h3>
+            <ul class="font-mono text-xs space-y-1.5 text-slate-700">
+              <li><strong class="text-primary">a mí</strong> → me gusta...</li>
+              <li><strong class="text-primary">a ti</strong> → te gusta...</li>
+              <li><strong class="text-primary">a Kasia/Marek</strong> → le gusta...</li>
+              <li><strong class="text-primary">a nosotros</strong> → nos gusta...</li>
+              <li><strong class="text-primary">a vosotros</strong> → os gusta...</li>
+              <li><strong class="text-primary">a mis padres</strong> → les gusta...</li>
+            </ul>
+          </div>
+          <p class="text-slate-400 text-[11px] mt-4 italic">Zaimki w nawiasach (a mí, a ti...) dla JA, TY, MY, WY możemy pomijać.</p>
+        </div>
+
+        <!-- Ćwiczenie -->
+        <div class="bg-white/80 border-2 border-primary/20 rounded-3xl p-6 flex flex-col justify-between shadow-lg">
+          <div class="space-y-4">
+            <h3 class="text-lg font-bold text-slate-800 border-b pb-2">Wpisz brakujące słowa:</h3>
+            
+            <div class="font-mono text-sm space-y-3">
+              <div>
+                <p class="text-slate-500 text-xs mb-1">1. (Juan lubi grać w szachy)</p>
+                A Juan le <input type="text" id="q1-input" placeholder="..." class="border border-slate-300 rounded px-2 py-0.5 w-24 text-center focus:outline-none focus:border-accent"> jugar al ajedrez.
+              </div>
+              <div>
+                <p class="text-slate-500 text-xs mb-1">2. (Lubimy jeździć na wycieczki)</p>
+                A nosotros nos <input type="text" id="q2-input" placeholder="..." class="border border-slate-300 rounded px-2 py-0.5 w-24 text-center focus:outline-none focus:border-accent"> ir de excursión.
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex gap-2">
+            <button onclick="checkAnswers()" class="bg-primary hover:bg-primary-dark text-white font-bold text-xs px-4 py-2 rounded-full transition-all">
+              Sprawdź
+            </button>
+            <button onclick="revealAnswers()" class="border border-slate-300 text-slate-600 font-bold text-xs px-4 py-2 rounded-full transition-all">
+              Pokaż rozwiązanie
+            </button>
+          </div>
+          
+          <div id="solution-box" class="mt-4 p-3 bg-slate-50 rounded-xl font-mono text-xs text-slate-600 hidden">
+            Poprawne odpowiedzi: 1. <strong>gusta</strong> | 2. <strong>gusta</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Controls -->
+  <div class="no-print relative z-20 bg-white/70 backdrop-blur border-t border-slate-200/50 px-6 py-4 flex items-center justify-between">
+    
+    <div class="flex items-center gap-4">
+      <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">
+        Slajd <span id="slide-num-current">1</span> z <span id="slide-num-total">9</span>
+      </span>
+      <div class="w-32 md:w-48 h-1.5 bg-slate-200 rounded-full overflow-hidden">
+        <div id="progress-indicator" class="h-full bg-primary transition-all duration-300" style="width: 11.11%"></div>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button onclick="prevSlide()" class="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-all">
+        ←
+      </button>
+      <button onclick="nextSlide()" class="bg-primary hover:bg-primary-dark text-white font-bold text-sm px-6 py-2 rounded-full shadow-md transition-all">
+        Dalej
+      </button>
+    </div>
+
+    <div class="hidden md:flex items-center gap-2">
+      <button onclick="window.print()" class="text-xs text-slate-500 hover:text-slate-800 border border-slate-200 rounded-full px-3 py-1.5 transition-colors">
+        🖨️ PDF (Ctrl + P)
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const totalSlides = 9;
+    
+    const slides = [];
+    for(let i=0; i<totalSlides; i++) {
+      slides.push(document.getElementById(`slide-${i}`));
+    }
+    
+    const currentNumEl = document.getElementById('slide-num-current');
+    const totalNumEl = document.getElementById('slide-num-total');
+    const progressEl = document.getElementById('progress-indicator');
+
+    document.addEventListener('keydown', (e) => {
+      if(e.target.tagName === 'INPUT') return;
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
+        prevSlide();
+      }
+    });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleGesture();
+    });
+    
+    function handleGesture() {
+      if (touchEndX < touchStartX - 50) {
+        nextSlide();
+      }
+      if (touchEndX > touchStartX + 50) {
+        prevSlide();
+      }
+    }
+
+    function renderSlide() {
+      slides.forEach((slide, idx) => {
+        if(idx === currentSlide) {
+          slide.classList.remove('hidden');
+          slide.classList.add('flex');
+          setTimeout(() => {
+            slide.style.opacity = '1';
+            slide.style.transform = 'translateY(0)';
+          }, 50);
+        } else {
+          slide.classList.add('hidden');
+          slide.classList.remove('flex');
+          slide.style.opacity = '0';
+          slide.style.transform = 'translateY(20px)';
+        }
+      });
+
+      currentNumEl.textContent = currentSlide + 1;
+      const progressPercent = ((currentSlide + 1) / totalSlides) * 100;
+      progressEl.style.width = `${progressPercent}%`;
+    }
+
+    function nextSlide() {
+      if(currentSlide < totalSlides - 1) {
+        currentSlide++;
+        renderSlide();
+      }
+    }
+
+    function prevSlide() {
+      if(currentSlide > 0) {
+        currentSlide--;
+        renderSlide();
+      }
+    }
+
+    function checkAnswers() {
+      const q1 = document.getElementById('q1-input').value.trim().toLowerCase();
+      const q2 = document.getElementById('q2-input').value.trim().toLowerCase();
+      
+      const input1 = document.getElementById('q1-input');
+      const input2 = document.getElementById('q2-input');
+      
+      input1.classList.remove('border-green-500', 'border-rose-500', 'bg-green-50', 'bg-rose-50');
+      input2.classList.remove('border-green-500', 'border-rose-500', 'bg-green-50', 'bg-rose-50');
+
+      if(q1 === 'gusta') {
+        input1.classList.add('border-green-500', 'bg-green-50');
+      } else {
+        input1.classList.add('border-rose-500', 'bg-rose-50');
+      }
+
+      if(q2 === 'gusta') {
+        input2.classList.add('border-green-500', 'bg-green-50');
+      } else {
+        input2.classList.add('border-rose-500', 'bg-rose-50');
+      }
+
+      revealAnswers();
+    }
+
+    function revealAnswers() {
+      const solutionBox = document.getElementById('solution-box');
+      solutionBox.classList.remove('hidden');
+    }
+
+    renderSlide();
+  </script>
+</body>
+</html>

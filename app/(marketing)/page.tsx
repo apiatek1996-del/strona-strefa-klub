@@ -28,20 +28,19 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center gap-8 mb-16">
             <div className="w-full md:w-[60%] text-left">
-              <p className="text-xl text-slate-800 font-bold mb-4 uppercase tracking-widest">
-                Czas na decyzję
+              <p className="text-xl text-slate-800 font-bold mb-4">
+                Wchodzisz na 10 minut przy kawie i wychodzisz z wyrażeniem, którego chcesz od razu użyć.
               </p>
-              <h2 className="text-3xl md:text-6xl font-heading font-bold text-slate-900 mb-8" style={{ fontFamily: 'var(--font-lora), serif' }}>
-                Wyobraź sobie, że za 3 miesiące:
+              <h2 className="text-3xl md:text-5xl font-heading font-bold text-slate-900 mb-8" style={{ fontFamily: 'var(--font-lora), serif' }}>
+                A za trzy miesiące:
               </h2>
               
               <div className="bg-white/60 rounded-3xl p-8 shadow-sm">
                 <ul className="space-y-4">
                   {[
-                    "Puszczasz serial hiszpański i rozumiesz żarty, które wcześniej Ci uciekały",
-                    "Wpadasz na 10 minut do Strefy i wychodzisz z nowym wyrażeniem, które od razu chcesz użyć",
-                    "Masz wreszcie poczucie, że hiszpański „żyje” w Twoim dniu, a nie tylko na zajęciach",
-                    "Słyszysz rozmowę na ulicy i myślisz: „o, to wyrażenie znam ze Strefy!”"
+                    "Włączasz serial i łapiesz żart, który dziś by Ci uciekł.",
+                    "Słyszysz rozmowę na ulicy i myślisz: o, to znam ze Strefy.",
+                    "Rzucasz coś w rozmowie i sama się dziwisz, że tak Ci wyszło.",
                   ].map((text, i) => (
                     <li key={i} className="flex items-start gap-4">
                       <span className="text-2xl mt-0.5">✨</span>
@@ -49,6 +48,9 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-6 text-slate-700 text-base">
+                  A dodatkowo ściągam z Ciebie ciężar szukania i pytanie „czego mam się uczyć?". Twoje 10 minut idzie na naukę, nie na wertowanie materiałów.
+                </p>
               </div>
             </div>
 
@@ -74,17 +76,16 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-xl text-slate-800 mb-8 font-bold">
-              To nie fantazja. To efekty moich kursantek.
-            </p>
-            
+          <div className="text-center mt-12">            
             <a 
               href="#cennik"
               className="inline-flex items-center justify-center rounded-full bg-primary px-12 py-6 text-2xl font-bold text-white shadow-2xl transition-all hover:bg-primary-dark hover:-translate-y-2 hover:scale-105"
             >
-              👉 ZAREZERWUJ SWOJE 3 DNI GRATIS
+              👉 SPRAWDŹ 3 DNI ZA DARMO
             </a>
+            <p className="mt-4 text-slate-600 text-sm">
+              Bez zobowiązań. Anulujesz jednym kliknięciem.
+            </p>
           </div>
         </div>
       </section>

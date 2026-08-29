@@ -10,13 +10,10 @@ const Footer = () => {
           {/* Left Side: About */}
           <div className="max-w-2xl">
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-6" style={{ fontFamily: 'var(--font-lora), serif' }}>
-              Agata Piątek — Ekspertka od Hiszpańskiego dla Polaków w Hiszpanii
+              Agata Piątek — uczę hiszpańskiego do życia w Hiszpanii
             </h3>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-4">
-              Mieszkam w Hiszpanii i pomagam Polakom przejść od <span className="text-primary italic font-handwriting">&quot;Hola, buenos días&quot;</span> do swobodnych rozmów przy kawie bez stresu.
-            </p>
-            <p className="text-slate-600 text-sm md:text-base">
-              Magistra filologii hiszpańskiej, 8 lat doświadczenia w nauczaniu.
+              Magistra filologii hiszpańskiej · 9 lat doświadczenia w nauczaniu · 5 lat życia w Hiszpanii
             </p>
           </div>
 
@@ -41,7 +38,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-600 text-sm">
-            © 2026 Agata Piątek. RTG Twojego Hiszpańskiego.
+            © 2026 Agata Piątek · Strefa Hiszpański
           </p>
           <div className="flex gap-8">
             <Link href="/polityka-prywatnosci" className="text-slate-600 hover:text-white transition-colors text-sm">

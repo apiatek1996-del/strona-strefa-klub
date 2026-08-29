@@ -9,7 +9,7 @@ const About = () => {
           {/* Header */}
           <div className="lg:col-start-1 lg:col-end-2">
             <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-normal text-slate-900 text-center lg:text-left" style={{ fontFamily: 'var(--font-lora), serif' }}>
-              Kto będzie Cię prowadził i dlaczego można mi zaufać?
+              Cześć, jestem Agata!
             </h2>
           </div>
 
@@ -30,9 +30,7 @@ const About = () => {
                   <p className="font-bold text-slate-800 text-sm">Zaufanie to dowody:</p>
                   <ul className="text-sm text-slate-600 mt-2 space-y-1">
                     <li>🎓 Magister filologii hiszpańskiej</li>
-                    <li>📚 17 lat z hiszpańskim</li>
                     <li>🧠 9 lat doświadczenia w nauczaniu</li>
-                    <li>👥 Ponad 400 kursantów</li>
                     <li className="flex items-center gap-2">
                       <svg className="w-4 h-3 inline-block shrink-0 rounded-sm shadow-sm" viewBox="0 0 750 500">
                         <rect width="750" height="500" fill="#c60b1e"/>
@@ -50,19 +48,33 @@ const About = () => {
           <div className="lg:col-start-2 lg:col-end-3 lg:row-start-2 mt-8 lg:mt-0">
             <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
               <p>
-                Ale najważniejsze są moje porażki.
+                Skończyłam magisterkę z filologii hiszpańskiej i mam ponad 9 lat doświadczenia w nauczaniu. Dziś mieszkam w Hiszpanii i czuję się tu jak w domu.
               </p>
+              <p className="font-bold text-slate-900">
+                Moja droga to nie była miłość od pierwszego wejrzenia:
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl shrink-0">💔</span>
+                  <span><strong>Nienawiść po licencjacie</strong> — nudne podręczniki i wkuwanie tabelek prawie zabiły moją pasję do języka.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl shrink-0">🗣️</span>
+                  <span><strong>8 lat do pierwszej swobodnej rozmowy</strong> — w szkole i na studiach nie uczą żywego języka. Sama zaczęłam mówić naprawdę swobodnie dopiero po ośmiu latach.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl shrink-0">🙈</span>
+                  <span><strong>Erasmusowy wstyd</strong> — chciałam powiedzieć kilka miłych słów o wykładzie, ale przed całą salą ze stresu nie potrafiłam nic wydukać. Musiałam dokończyć po angielsku.</span>
+                </li>
+              </ul>
               <p>
-                Po 8 latach nauki ledwo wydukałam składne zdanie. Na Erasmusie, przed całą salą, chciałam powiedzieć kilka miłych słów po wykładzie, który mnie zachwycił... i musiałam przejść na angielski, bo nikt mnie nie zrozumiał.
+                Uczyłam się do egzaminów. A nie do rozmowy, do wyrażania siebie i tego, co czuję.
               </p>
               <p className="font-bold text-slate-900 bg-orange-50 p-4 rounded-xl border border-orange-100">
-                Największy wstyd w moim życiu.
+                Dlatego teraz uczę tak, jak uczę.
               </p>
               <p>
-                I właśnie dlatego wiem, gdzie tkwi problem. Nie w braku talentu. Nie w „trudnym języku”. W metodzie.
-              </p>
-              <p>
-                Większość kursów i podręczników uczy Cię hiszpańskiego do podstawowej komunikacji. Ja uczę żywego języka — tego, który podchwycisz przy stoliku w hiszpańskiej kawiarni, albo którym zagada do Ciebie sąsiadka na Airbnb w Barcelonie.
+                Nie przygotowuję do matury. Nie daję korepetycji. Nie prowadzę do certyfikatu. Wyławiam żywy hiszpański z tego, co dzieje się wokół mnie każdego dnia — i podaję go w gotowej formie osobom, które nie mają czasu robić tego same.
               </p>
             </div>
           </div>
