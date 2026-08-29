@@ -17,7 +17,11 @@ const FAQ = () => {
     },
     {
       question: "Co dostaję jako bonus?",
-      answer: `Poza codziennym wyrażeniem dostajesz: „Zasłyszane na ulicy" — co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco; ściągawki do pobrania — gramatyka wytłumaczona logicznie, do wydrukowania albo trzymania w telefonie; 15 promptów do AI (wartość 97 zł) — gotowe instrukcje, dzięki którym ChatGPT staje się partnerem do ćwiczenia hiszpańskiego, a nie tylko tłumaczem; dostęp do forum — możesz znaleźć tam osobę do ćwiczenia, czyli tandem językowy; archiwum ponad 400 wpisów — masz do niego dostęp od pierwszego dnia. A wkrótce dochodzą podcasty, karty pracy do seriali i kursy gramatyczne — bez dopłaty, w tej samej cenie.`
+      answer: `Poza codziennym wyrażeniem dostajesz: „Zasłyszane na ulicy" — co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco; ściągawki do pobrania — gramatyka wytłumaczona logicznie, do wydrukowania albo trzymania w telefonie; 15 promptów do AI (wartość 97 zł) — gotowe instrukcje, dzięki którym ChatGPT staje się partnerem do ćwiczenia hiszpańskiego, a nie tylko tłumaczem; dostęp do forum — możesz znaleźć tam osobę do ćwiczenia, czyli tandem językowy; archiwum ponad 400 wpisów — masz do niego dostęp od pierwszego dnia.`
+    },
+    {
+      question: "Czy Strefa się rozwija?",
+      answer: "Tak. Wkrótce dochodzą krótkie podcasty na kilku poziomach, karty pracy do znanych seriali oraz kursy gramatyczne: Ogarnij podstawy, Ogarnij czasy przeszłe, Ogarnij subjuntivo i Mów jak Hiszpan. Dołączając teraz, masz do nich dostęp bez dopłaty, kiedy się pojawią."
     },
     {
       question: "Czy potrzebuję podręczników albo dodatkowych materiałów?",
@@ -29,7 +33,7 @@ const FAQ = () => {
     },
     {
       question: "Czy mogę zrezygnować w dowolnym momencie?",
-      answer: "Tak, jednym kliknięciem. Bez wypowiedzenia, bez pytań, bez tłumaczenia się. Pierwsze 3 dni są za darmo, więc możesz sprawdzić od środka, zanim cokolwiek zapłacisz."
+      answer: "Tak, jednym kliknięciem. Bez wypowiedzenia, bez pytań, bez tłumaczenia się. Pierwsze 7 dni jest za darmo, więc możesz sprawdzić od środka, zanim cokolwiek zapłacisz."
     },
     {
       question: "Co jeśli mam pytanie do konkretnego wyrażenia?",

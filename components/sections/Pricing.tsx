@@ -18,7 +18,16 @@ const Pricing = () => {
 
         <div className="relative rounded-[2rem] bg-primary-light p-8 md:p-12 shadow-2xl border-2 border-primary">
           <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white font-bold px-6 py-1.5 rounded-full text-sm uppercase tracking-wider shadow-lg whitespace-nowrap">
-            Pierwsze 3 dni za darmo
+            Pierwsze 7 dni za darmo
+          </div>
+
+          {/* Mały sticker z mockupem platformy */}
+          <div className="absolute -top-10 -right-4 sm:-right-8 z-20 w-24 sm:w-32 rotate-12 hover:rotate-3 transition-transform duration-300 pointer-events-none drop-shadow-xl">
+            <img 
+              src="/strefa_mockup_v4.png" 
+              alt="Strefa Hiszpański w telefonie" 
+              className="w-full h-auto"
+            />
           </div>
 
           <div className="mb-8 mt-4">
@@ -54,7 +63,7 @@ const Pricing = () => {
           </ul>
 
           <Link
-            href="https://ogarnij-hiszpanski.circle.so/checkout/strefa-hiszpanski"
+            href="https://ogarnij-hiszpanski.circle.so/checkout/klub-hiszpanski-todos-los-dias-oficial"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
@@ -66,10 +75,10 @@ const Pricing = () => {
                 });
               }
             }}
-            className="flex items-center justify-center gap-2 w-full rounded-full py-5 text-center text-lg font-bold bg-primary text-white shadow-lg hover:bg-primary-dark hover:-translate-y-1 transition-all"
+            className="flex items-center justify-center gap-2 w-full rounded-full py-5 text-center text-lg font-bold bg-[#FFC529] border-2 border-slate-900 text-slate-950 shadow-md hover:bg-[#FFD043] hover:-translate-y-1 transition-all"
           >
             DOŁĄCZAM DO STREFY
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 text-slate-900" />
           </Link>
         </div>
 

@@ -1,3 +1,4 @@
+"use client";
 
 const Testimonials = () => {
   // Punchy short screenshots
@@ -10,28 +11,31 @@ const Testimonials = () => {
     "/testimonials/t14.jpg",
   ];
 
-  // Extracted "gold nuggets" from longer conversations
+  // Text testimonials formatted as authentic Telegram message bubbles
   const textTestimonials = [
     {
       text: "Takie małe dawki są najlepsze, bo szybko wchodzą do głowy i nie nudzą. Każdego dnia otwiera się nowe okienko i pojawia się nowa niespodzianka!",
-      author: "Opinia z Klubu"
+      time: "11:24",
+      hasReaction: true,
     },
-
     {
       text: "To jedyny kanał nadawczy do którego cały czas zaglądam. Ten klub autentycznie ma ogromny potencjał!",
-      author: "Członek Klubu"
+      time: "15:40",
+      hasReaction: false,
     },
     {
       text: "Kiedy mam do czynienia z hiszpańskim na co dzień, to czuję się pewniej czytając, słuchając, mówiąc i pisząc. Dla mnie ekstra!",
-      author: "Kursantka"
+      time: "09:15",
+      hasReaction: true,
     },
     {
-      text: "Cenne są te rzeczy „z życia", bo to pokazuje, że ten hiszpański naprawdę żyje i dużo fajnych rzeczy się w nim dzieje.",
-      author: "Członkini Społeczności"
+      text: `Cenne są te rzeczy "z życia", bo to pokazuje, że ten hiszpański naprawdę żyje i dużo fajnych rzeczy się w nim dzieje.`,
+      time: "18:02",
+      hasReaction: true,
     },
   ];
 
-  // Interleaved combined array for better visual flow
+  // Interleaved combined array
   const allTestimonials = [
     { type: 'text', content: textTestimonials[0] },
     { type: 'image', src: screenshotImages[0] },
@@ -66,20 +70,32 @@ const Testimonials = () => {
           {allTestimonials.map((item, index) => (
             <div key={index} className="break-inside-avoid">
               {item.type === 'text' ? (
-                <div className="bg-white p-8 rounded-3xl shadow-sm border border-orange-100 hover:shadow-md transition-shadow">
-                  <p className="text-slate-700 text-lg leading-relaxed italic mb-6">
-                    &quot;{item.content?.text}&quot;
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="h-px w-8 bg-primary/30"></div>
-                    <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">{item.content?.author}</span>
+                /* Authentic Telegram Chat Bubble */
+                <div className="relative inline-block w-full pb-3">
+                  <div className="bg-white/95 backdrop-blur-xs px-5 pt-4 pb-3 rounded-[22px] rounded-bl-[4px] shadow-[0_1px_3px_rgba(0,0,0,0.06)] border border-slate-100/80 hover:shadow-md transition-shadow">
+                    <p className="text-slate-900 text-[16px] sm:text-[17px] leading-[1.4] font-normal tracking-normal">
+                      {item.content?.text}
+                    </p>
+                    
+                    <div className="flex justify-end mt-1">
+                      <span className="text-[12px] text-slate-400/90 font-sans select-none">
+                        {item.content?.time}
+                      </span>
+                    </div>
                   </div>
+
+                  {/* Reaction Bubble on corner */}
+                  {item.content?.hasReaction && (
+                    <div className="absolute -bottom-1 left-3 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.1)] rounded-full w-8 h-8 flex items-center justify-center border border-slate-100 select-none">
+                      <span className="text-[14px]">❤️</span>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <img 
                   src={item.src} 
-                  alt={`Opinia członka Klubu`} 
-                  className="w-full h-auto rounded-2xl shadow-sm border border-orange-100 hover:scale-[1.01] transition-transform duration-300"
+                  alt="Opinia członka Klubu" 
+                  className="w-full h-auto rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] border border-slate-100/80 hover:scale-[1.01] transition-transform duration-300"
                 />
               )}
             </div>

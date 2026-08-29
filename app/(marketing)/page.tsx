@@ -1,10 +1,10 @@
 import Hero from "@/components/sections/Hero";
 import PainPoints from "@/components/sections/PainPoints";
 import Solution from "@/components/sections/Solution";
+import LessonExample from "@/components/sections/LessonExample";
 import Features from "@/components/sections/Features";
 import Target from "@/components/sections/Target";
 import About from "@/components/sections/About";
-import Offer from "@/components/sections/Offer";
 import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
 import Testimonials from "@/components/sections/Testimonials";
@@ -15,10 +15,10 @@ export default function Home() {
       <Hero />
       <PainPoints />
       <Solution />
+      <LessonExample />
       <Features />
       <Target />
       <About />
-      <Offer />
       <Pricing />
       <Testimonials />
       <FAQ />
@@ -79,9 +79,9 @@ export default function Home() {
           <div className="text-center mt-12">            
             <a 
               href="#cennik"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-12 py-6 text-2xl font-bold text-white shadow-2xl transition-all hover:bg-primary-dark hover:-translate-y-2 hover:scale-105"
+              className="inline-flex items-center justify-center rounded-full bg-[#FFC529] border-2 border-slate-900 px-12 py-6 text-2xl font-black text-slate-950 shadow-xl transition-all hover:bg-[#FFD043] hover:-translate-y-2 hover:scale-105"
             >
-              👉 SPRAWDŹ 3 DNI ZA DARMO
+              👉 SPRAWDŹ 7 DNI ZA DARMO
             </a>
             <p className="mt-4 text-slate-600 text-sm">
               Bez zobowiązań. Anulujesz jednym kliknięciem.

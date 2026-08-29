@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex">
           <Link 
             href="#cennik"
-            className="rounded-full bg-primary px-5 py-2 md:px-6 md:py-2.5 text-sm md:text-base font-bold text-white shadow-md transition-all hover:bg-primary-dark hover:shadow-lg active:scale-95"
+            className="rounded-full bg-[#FFC529] border-2 border-slate-900 px-5 py-2 md:px-6 md:py-2.5 text-sm md:text-base font-bold text-slate-950 shadow-xs transition-all hover:bg-[#FFD043] hover:-translate-y-0.5 active:scale-95"
           >
             Dołącz teraz
           </Link>

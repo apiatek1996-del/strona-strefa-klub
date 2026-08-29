@@ -1,108 +1,142 @@
 "use client";
 
+import { useState } from "react";
 import { CheckCircle2, Clock } from "lucide-react";
+import { Lightbox } from "@/components/ui/Lightbox";
 
 const Offer = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
   const currentElements = [
     {
+      id: "daily",
       title: "Codzienne wyrażenie, od poniedziałku do piątku",
       desc: "Z dogłębną analizą — nie tylko usłyszysz o nowym słówku czy konstrukcji, ale dokładnie będziesz wiedzieć, kiedy możesz jej użyć"
     },
     {
+      id: "archive",
       title: "Archiwum ponad 400 wpisów",
       desc: "Od pierwszego dnia masz dostęp do wszystkiego, co powstało do tej pory"
     },
     {
-      title: '\u201eZasłyszane na ulicy\u201d',
-      desc: "Co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco"
+      id: "street",
+      title: `„Zasłyszane na ulicy"`,
+      desc: "Co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco",
+      hasImage: true
     },
     {
+      id: "cheatsheets",
       title: "Ściągawki do pobrania",
       desc: "Gramatyka wytłumaczona logicznie, nie definicjami"
     },
     {
-      title: "Forum",
-      desc: "Znajdziesz tam osobę do ćwiczenia hiszpańskiego, czyli tandem językowy"
+      id: "forum",
+      title: "Forum i tandem językowy",
+      desc: "Znajdziesz tam osobę do ćwiczenia hiszpańskiego"
     },
     {
+      id: "questions",
       title: "Możliwość zadawania pytań",
       desc: "Pod każdym postem — odpowiadam osobiście"
     },
   ];
 
   const futureElements = [
-    {
-      title: "Krótkie podcasty na kilku poziomach",
-      desc: "Do słuchania w drodze"
-    },
-    {
-      title: "Karty pracy do znanych seriali",
-      desc: "Do pracy z każdym odcinkiem"
-    },
-    {
-      title: "Kursy gramatyczne",
-      desc: "Ogarnij podstawy · Ogarnij czasy przeszłe · Ogarnij subjuntivo · Mów jak Hiszpan (wymowa)"
-    }
+    { title: "Krótkie podcasty na kilku poziomach", desc: "Do słuchania w drodze" },
+    { title: "Karty pracy do znanych seriali", desc: "Do pracy z każdym odcinkiem" },
+    { title: "Kursy gramatyczne", desc: "Ogarnij podstawy · czasy przeszłe · subjuntivo · wymowa" }
   ];
 
   return (
-    <section className="bg-emerald-800 py-20 lg:py-32 relative overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-600/30 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+    <section className="bg-white py-20 lg:py-28">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-normal text-white mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-lora), serif' }}>
-            Wszystko w jednym miejscu — <span className="bg-primary px-6 py-1 rounded-full inline-block text-white">w Strefie</span>
+        <div className="max-w-2xl mb-14">
+          <p className="text-primary font-bold uppercase tracking-wider text-sm mb-3">Co dostajesz</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 leading-snug">
+            Wszystko w jednym miejscu
           </h2>
-          <p className="text-emerald-200 text-lg">W telefonie albo na komputerze, jak wolisz.</p>
+          <p className="text-slate-500 mt-3">W telefonie albo na komputerze, jak wolisz.</p>
         </div>
 
-        <div className="bg-white rounded-3xl p-6 md:p-10 shadow-2xl mb-12 border border-white/50 relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {currentElements.map((el, i) => (
-              <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/80 hover:bg-slate-50 transition-colors">
-                <CheckCircle2 className="text-primary shrink-0 mt-1" />
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-8 mb-16 items-start">
+          {currentElements.map((el) => (
+            <div key={el.id} className="flex items-start gap-4">
+              <CheckCircle2 className="text-primary shrink-0 mt-0.5 w-5 h-5" />
+              <div className="w-full">
+                <span className="font-semibold text-slate-800 block">{el.title}</span>
+                <span className="text-slate-500 text-sm block">{el.desc}</span>
+
+                {el.hasImage && (
+                  <div className="mt-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg">
+                      {/* Post z rolką/grafiką */}
+                      <div
+                        className="relative cursor-zoom-in rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-slate-100 bg-slate-900"
+                        onClick={() => setLightbox({
+                          src: "/lessons/la-cague.png",
+                          alt: "Post z analizą wyrażenia la cagué na Instagramie"
+                        })}
+                      >
+                        <img
+                          src="/lessons/la-cague.png"
+                          alt="Post z analizą wyrażenia la cagué na Instagramie"
+                          className="w-full h-auto block"
+                        />
+                        {/* Zamazanie paska lajków i komentarzy */}
+                        <div className="absolute bottom-0 left-0 right-0 h-10 bg-black/80 backdrop-blur-md" aria-hidden="true" />
+                      </div>
+
+                      {/* Wytłumaczenie */}
+                      <div
+                        className="relative cursor-zoom-in rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-slate-100 bg-white"
+                        onClick={() => setLightbox({
+                          src: "/lessons/la-cague-text.png",
+                          alt: "Wytłumaczenie wyrażenia la cagué"
+                        })}
+                      >
+                        <img
+                          src="/lessons/la-cague-text.png"
+                          alt="Wytłumaczenie wyrażenia la cagué"
+                          className="w-full h-auto block"
+                        />
+                      </div>
+                    </div>
+                    <p className="text-sm text-slate-400 italic mt-2">
+                      Prawdziwy hiszpański bywa dosadny. Uczę też takiego.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-slate-100 pt-10">
+          <div className="flex items-center gap-2 mb-6">
+            <Clock className="w-4 h-4 text-slate-400" />
+            <p className="text-sm font-bold uppercase tracking-wider text-slate-400">Wchodzi wkrótce — w tej samej cenie</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {futureElements.map((el, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="text-primary font-bold shrink-0">+</span>
                 <div>
-                  <span className="font-bold text-slate-800 text-lg block mb-1">{el.title}</span>
-                  {el.desc && <span className="text-slate-600 text-sm block">{el.desc}</span>}
+                  <span className="font-semibold text-slate-700 block text-sm">{el.title}</span>
+                  <span className="text-slate-400 text-sm">{el.desc}</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden border border-white/50">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent" />
-          
-          <div className="flex-grow">
-            <h3 className="text-xl font-bold text-slate-800 mb-2 flex flex-col uppercase">
-              <span className="text-primary text-sm tracking-[0.2em] mb-1">WCHODZI WKRÓTCE:</span>
-              <span className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-primary" /> Dostajesz w tej samej cenie
-              </span>
-            </h3>
-            <p className="text-slate-600 mb-6 text-sm font-medium">
-              Dołączając teraz, masz do nich dostęp bez dopłaty, kiedy się pojawią.
-            </p>
-            <ul className="space-y-4">
-              {futureElements.map((el, i) => (
-                <li key={i} className="flex flex-col sm:flex-row sm:items-center gap-4 p-4 rounded-xl bg-white/50 border border-slate-100">
-                  <div className="flex items-start gap-4 w-full">
-                    <div className="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">+</div>
-                    <div>
-                      <span className="font-bold text-slate-700 block mb-1">{el.title}</span>
-                      <span className="text-slate-500 text-sm block">{el.desc}</span>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
       </div>
+
+      <Lightbox
+        src={lightbox?.src ?? null}
+        alt={lightbox?.alt ?? ""}
+        onClose={() => setLightbox(null)}
+      />
     </section>
   );
 };
