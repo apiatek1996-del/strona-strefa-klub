@@ -38,7 +38,7 @@ const Solution = () => {
               </div>
 
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
-                I to nie jest niegrzeczne — rozkazy i mówienie na „ty” w Hiszpanii to sposób na powiedzenie: <em>szanuję Cię jak własną rodzinę</em>.
+                I to nie jest niegrzeczne — bo rozkazy w hiszpańskim to chleb powszedni. My kulturowo wyrażamy szacunek przez zwiększanie dystansu: „czy mógłby Pan proszę…”. W Hiszpanii jest odwrotnie. Tryb rozkazujący i mówienie na „ty” to sposób na powiedzenie: <em>szanuję Cię jak własną rodzinę, więc tak właśnie będę się do Ciebie zwracać</em>.
               </p>
             </div>
           </div>
