@@ -63,7 +63,7 @@ const Pricing = () => {
           </ul>
 
           <Link
-            href="https://ogarnij-hiszpanski.circle.so/checkout/klub-hiszpanski-todos-los-dias-oficial"
+            href="https://ogarnij-hiszpanski.circle.so/checkout/strefa-hiszpanski"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
