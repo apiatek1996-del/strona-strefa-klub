@@ -29,7 +29,14 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl sm:text-2xl text-slate-800 font-handwriting italic mb-8">
-              Ja wiem. Codziennie wybieram i serwuję Ci porcję żywego i przydatnego hiszpańskiego 🇪🇸 prosto na Twój telefon
+              Ja wiem. Codziennie wybieram i serwuję Ci porcję żywego i przydatnego hiszpańskiego{" "}
+              <span className="inline-block align-middle mx-1 -mt-1 shadow-2xs">
+                <svg className="w-5 sm:w-6 h-3.5 sm:h-4 inline rounded-xs" viewBox="0 0 750 500">
+                  <rect width="750" height="500" fill="#c60b1e"/>
+                  <rect width="750" height="250" y="125" fill="#ffc400"/>
+                </svg>
+              </span>{" "}
+              prosto na Twój telefon
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
