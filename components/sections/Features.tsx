@@ -103,10 +103,10 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Graficzna OŚ CZASU (Timeline) */}
-        <div className="bg-slate-50 rounded-3xl p-7 sm:p-12 border border-slate-200/80 relative overflow-hidden">
+        {/* Graficzna PIONOWA OŚ CZASU (Vertical Timeline) */}
+        <div className="bg-slate-50 rounded-3xl p-7 sm:p-12 border border-slate-200/80 relative overflow-hidden max-w-3xl mx-auto">
           
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200/60">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-xs font-bold text-primary border border-slate-200/80 mb-2 shadow-2xs">
                 <TrendingUp className="w-3.5 h-3.5" />
@@ -121,55 +121,45 @@ const Features = () => {
             </p>
           </div>
 
-          {/* Oś czasu - układ graficzny */}
-          <div className="relative">
-            
-            {/* Pozioma linia łącząca na desktopie */}
-            <div className="hidden md:block absolute top-7 left-12 right-12 h-1 bg-gradient-to-r from-amber-300 via-orange-400 to-emerald-500 rounded-full z-0" />
+          {/* Pionowa oś czasu */}
+          <div className="relative pl-2 sm:pl-4 space-y-6 sm:space-y-8">
+            {/* Pionowa linia łącząca */}
+            <div className="absolute top-6 bottom-6 left-[27px] sm:left-[35px] w-1 bg-gradient-to-b from-amber-300 via-orange-400 to-emerald-500 rounded-full z-0" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-              {timelineSteps.map((step, i) => (
-                <div key={i} className="flex flex-col">
-                  
-                  {/* Węzeł na osi czasu */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-14 h-14 rounded-2xl bg-white border-2 border-slate-200/80 shadow-md flex items-center justify-center text-2xl shrink-0">
-                      {step.emoji}
-                    </div>
-                    <div className="md:hidden flex-1 h-0.5 bg-slate-200" />
-                  </div>
-
-                  {/* Karta etapu na osi */}
-                  <div className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-xs flex-1 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${step.accent}`}>
-                          Krok 0{i + 1}
-                        </span>
-                      </div>
-
-                      <h4 className="text-xl font-bold text-slate-900 mb-2">
-                        {step.time}
-                      </h4>
-
-                      <p className="text-slate-600 text-sm sm:text-[15px] leading-relaxed">
-                        {step.text}
-                      </p>
-                    </div>
-
-                    {step.quote && (
-                      <div className="mt-4 pt-3 border-t border-slate-100">
-                        <span className="inline-block bg-emerald-50 text-emerald-700 font-bold font-mono text-sm sm:text-base px-3 py-1.5 rounded-xl border border-emerald-100">
-                          {step.quote}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-
+            {timelineSteps.map((step, i) => (
+              <div key={i} className="relative z-10 flex items-start gap-4 sm:gap-6">
+                
+                {/* Węzeł na osi */}
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white border-2 border-slate-200/90 shadow-md flex items-center justify-center text-xl sm:text-2xl shrink-0">
+                  {step.emoji}
                 </div>
-              ))}
-            </div>
 
+                {/* Karta */}
+                <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-xs flex-1 hover:shadow-md transition-shadow">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h4 className="text-lg sm:text-xl font-bold text-slate-900">
+                      {step.time}
+                    </h4>
+                    <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full border ${step.accent}`}>
+                      Krok 0{i + 1}
+                    </span>
+                  </div>
+
+                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    {step.text}
+                  </p>
+
+                  {step.quote && (
+                    <div className="mt-3 pt-3 border-t border-slate-100">
+                      <span className="inline-block bg-emerald-50 text-emerald-700 font-bold font-mono text-sm sm:text-base px-3 py-1.5 rounded-xl border border-emerald-100">
+                        {step.quote}
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+              </div>
+            ))}
           </div>
 
         </div>

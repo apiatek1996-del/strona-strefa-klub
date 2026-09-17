@@ -46,7 +46,7 @@ const Pricing = () => {
               "Codzienne wyrażenie od poniedziałku do piątku z dogłębną analizą",
               "Archiwum ponad 400 wpisów — dostęp od pierwszego dnia",
               '„Zasłyszane na ulicy” — fragmenty prawdziwych rozmów z Hiszpanii',
-              "Ściągawki do pobrania — gramatyka wytłumaczona logicznie",
+              "Ściągawki do pobrania — gramatyka wytłumaczona logicznie, gotowa do użycia",
               "Forum i tandem językowy",
               "Możliwość zadawania pytań pod każdym postem",
               { bold: true, text: "🔥 BONUS: 15 promptów AI do ćwiczenia hiszpańskiego (wartość 97 zł)" },

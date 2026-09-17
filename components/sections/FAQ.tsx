@@ -17,7 +17,7 @@ const FAQ = () => {
     },
     {
       question: "Co dostaję jako bonus?",
-      answer: `Poza codziennym wyrażeniem dostajesz: „Zasłyszane na ulicy" — co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco; ściągawki do pobrania — gramatyka wytłumaczona logicznie, do wydrukowania albo trzymania w telefonie; 15 promptów do AI (wartość 97 zł) — gotowe instrukcje, dzięki którym ChatGPT staje się partnerem do ćwiczenia hiszpańskiego, a nie tylko tłumaczem; dostęp do forum — możesz znaleźć tam osobę do ćwiczenia, czyli tandem językowy; archiwum ponad 400 wpisów — masz do niego dostęp od pierwszego dnia.`
+      answer: `Poza codziennym wyrażeniem dostajesz: „Zasłyszane na ulicy" — co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco; ściągawki do pobrania — gramatyka wytłumaczona logicznie, gotowa do użycia, do wydrukowania albo trzymania w telefonie; 15 promptów do AI (wartość 97 zł) — gotowe instrukcje, dzięki którym ChatGPT staje się partnerem do ćwiczenia hiszpańskiego, a nie tylko tłumaczem; dostęp do forum — możesz znaleźć tam osobę do ćwiczenia, czyli tandem językowy; archiwum ponad 400 wpisów — masz do niego dostęp od pierwszego dnia.`
     },
     {
       question: "Czy Strefa się rozwija?",
