@@ -42,7 +42,7 @@ const LessonExample = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 leading-snug mb-2">
             Tak wygląda jedna lekcja
           </h2>
-          <p className="text-xl text-slate-500 font-medium">To nie jest słówko dnia. To rozbiór.</p>
+          <p className="text-xl text-slate-500 font-medium">To nie jest słówko dnia. To rozbiór na czynniki pierwsze.</p>
         </div>
 
         {/* Tekst wprowadzający */}
