@@ -97,8 +97,8 @@ const Testimonials = () => {
     {
       type: "image",
       content: {
-        src: "/testimonials/t_lepiej_niz_insta.jpg",
-        alt: "Opinia członka Klubu: Z wiadomościami działa to dużo lepiej niż posty na insta",
+        src: "/testimonials/t_gosia_clean.jpg",
+        alt: "Opinia członka Klubu (Gosia): Super alternatywa do Instagrama, konkretne wybrane treści",
       },
     },
     {
