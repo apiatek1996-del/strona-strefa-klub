@@ -1,102 +1,192 @@
 "use client";
 
+import React from "react";
+
+interface TextTestimonial {
+  text: string;
+  highlighted: string; // Key phrase to emphasize
+  fullTextBefore: string;
+  fullTextAfter: string;
+  time: string;
+  reaction?: string;
+}
+
+interface ImageTestimonial {
+  src: string;
+  alt: string;
+}
+
+type TestimonialItem = 
+  | { type: "text"; content: TextTestimonial }
+  | { type: "image"; content: ImageTestimonial };
+
 const Testimonials = () => {
-  // Punchy short screenshots
-  const screenshotImages = [
-    "/testimonials/t1.jpg",
-    "/testimonials/t3.jpg",
-    "/testimonials/t4.jpg",
-    "/testimonials/t12.jpg",
-    "/testimonials/t13.jpg",
-    "/testimonials/t14.jpg",
-  ];
-
-  // Text testimonials formatted as authentic Telegram message bubbles
-  const textTestimonials = [
+  const testimonials: TestimonialItem[] = [
     {
-      text: "Takie małe dawki są najlepsze, bo szybko wchodzą do głowy i nie nudzą. Każdego dnia otwiera się nowe okienko i pojawia się nowa niespodzianka!",
-      time: "11:24",
-      hasReaction: true,
+      type: "text",
+      content: {
+        fullTextBefore: "Holi! Mam bardzo pozytywne odczucia, naprawdę! ",
+        highlighted: "Kiedy mam do czynienia z hiszpańskim na co dzień, to czuję się pewniej czytając, słuchając, mówiąc i pisząc",
+        fullTextAfter: ", także dla mnie ekstra!",
+        text: "",
+        time: "09:15",
+        reaction: "❤️",
+      },
     },
     {
-      text: "To jedyny kanał nadawczy do którego cały czas zaglądam. Ten klub autentycznie ma ogromny potencjał!",
-      time: "15:40",
-      hasReaction: false,
+      type: "text",
+      content: {
+        fullTextBefore: "Ogólnie bardzo podoba mi się forma codziennego przypominania o sobie w stylu: ",
+        highlighted: "hejka, tu hiszpański, pamiętasz uczyć się nowych rzeczy codziennie i robić powtórki? 😂",
+        fullTextAfter: "",
+        text: "",
+        time: "14:40",
+        reaction: "🔥",
+      },
     },
     {
-      text: "Kiedy mam do czynienia z hiszpańskim na co dzień, to czuję się pewniej czytając, słuchając, mówiąc i pisząc. Dla mnie ekstra!",
-      time: "09:15",
-      hasReaction: true,
+      type: "image",
+      content: {
+        src: "/testimonials/t1.jpg",
+        alt: "Opinia członka Klubu: Ja nie wyobrażam sobie nie zostać",
+      },
     },
     {
-      text: `Cenne są te rzeczy "z życia", bo to pokazuje, że ten hiszpański naprawdę żyje i dużo fajnych rzeczy się w nim dzieje.`,
-      time: "18:02",
-      hasReaction: true,
+      type: "text",
+      content: {
+        fullTextBefore: "Dla mnie zawsze cenne są takie rzeczy „z życia”, czyli np. jak było z tym sin permiso albo pegar albo en nada, bo ",
+        highlighted: "to pokazuje, że ten hiszpański naprawdę żyje i dużo fajnych rzeczy się w nim dzieje",
+        fullTextAfter: " 😀",
+        text: "",
+        time: "16:05",
+        reaction: "✨",
+      },
     },
-  ];
-
-  // Interleaved combined array
-  const allTestimonials = [
-    { type: 'text', content: textTestimonials[0] },
-    { type: 'image', src: screenshotImages[0] },
-    { type: 'text', content: textTestimonials[1] },
-    { type: 'image', src: screenshotImages[1] },
-    { type: 'text', content: textTestimonials[2] },
-    { type: 'image', src: screenshotImages[2] },
-    { type: 'text', content: textTestimonials[3] },
-    { type: 'image', src: screenshotImages[3] },
-    { type: 'image', src: screenshotImages[4] },
-    { type: 'image', src: screenshotImages[5] },
+    {
+      type: "image",
+      content: {
+        src: "/testimonials/t11.jpg",
+        alt: "Opinia członka Klubu: Fajnie tak każdego dnia coś poczytać/odsłuchać",
+      },
+    },
+    {
+      type: "text",
+      content: {
+        fullTextBefore: "Tematycznie też jest ciekawie, ",
+        highlighted: "żadnych zbędnych zdań z książek",
+        fullTextAfter: " oraz są takie rzeczy dodatkowe... Potrafisz zaciekawić, nawet ten temat z modą przyjemnie się analizowało, pomimo że to nie moja pasja! 👏",
+        text: "",
+        time: "17:43",
+        reaction: "👏",
+      },
+    },
+    {
+      type: "text",
+      content: {
+        fullTextBefore: "Jeśli mam być szczery to nie wiem jak, ale faktycznie ",
+        highlighted: "jest to jedyny kanał do którego cały czas zaglądam",
+        fullTextAfter: ". Więc motywuje... ten klub autentycznie ma duży potencjał 😃",
+        text: "",
+        time: "18:12",
+        reaction: "❤️",
+      },
+    },
+    {
+      type: "text",
+      content: {
+        fullTextBefore: "Hej, śledzę na bieżąco i super że treści znikają, bo tak daje to motywację do regularności. W przypadku postów na social mediach nie widziałam nic haha, a ",
+        highlighted: "z takimi wiadomościami to działa dużo lepiej!",
+        fullTextAfter: "",
+        text: "",
+        time: "13:40",
+        reaction: "🚀",
+      },
+    },
+    {
+      type: "text",
+      content: {
+        fullTextBefore: "Zaglądam na kanał codziennie... Odkąd pojawiły się u Ciebie te skróty i zwroty, ",
+        highlighted: "widzę je teraz coraz częściej w hiszpańskich wiadomościach i od razu wiem o co chodzi!",
+        fullTextAfter: "",
+        text: "",
+        time: "17:02",
+        reaction: "💡",
+      },
+    },
+    {
+      type: "text",
+      content: {
+        fullTextBefore: "Takie ",
+        highlighted: "małe dawki są najlepsze, bo szybko wchodzą do głowy i nie nudzą",
+        fullTextAfter: ". Każdego dnia nowa, konkretna porcja wiedzy, która nie przytłacza!",
+        text: "",
+        time: "11:24",
+        reaction: "🔥",
+      },
+    },
   ];
 
   return (
     <section id="opinie" className="bg-[#FAF3EB] py-20 lg:py-32 overflow-hidden relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-normal text-slate-800 mb-6" style={{ fontFamily: 'var(--font-lora), serif' }}>
+          <h2
+            className="text-3xl md:text-5xl font-heading font-bold tracking-normal text-slate-800 mb-6"
+            style={{ fontFamily: "var(--font-lora), serif" }}
+          >
             Co mówią członkowie <span className="text-primary">Klubu?</span>
           </h2>
           <p className="text-lg text-slate-600 mb-8">
             Prawdziwe głosy osób, które są w Klubie każdego dnia.
           </p>
-          <div className="inline-flex items-center gap-3 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border border-orange-100 text-sm text-slate-500 shadow-sm">
-            <span className="text-primary font-bold">i</span>
-            <span>Część opinii pochodzi z czasu, gdy Klub działał na Telegramie (zanim przenieśliśmy się na własną platformę!)</span>
+          <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-orange-100 text-sm text-slate-600 shadow-sm">
+            <span className="w-5 h-5 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center">
+              i
+            </span>
+            <span>
+              Część opinii pochodzi z czasu, gdy Klub startował na Telegramie (obecnie działamy na dedykowanej platformie!)
+            </span>
           </div>
         </div>
 
-        {/* Masonry grid with interleaved content */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-          {allTestimonials.map((item, index) => (
+        {/* Masonry grid */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          {testimonials.map((item, index) => (
             <div key={index} className="break-inside-avoid">
-              {item.type === 'text' ? (
-                /* Authentic Telegram Chat Bubble */
+              {item.type === "text" ? (
+                /* Authentic Chat Bubble with Key Highlight */
                 <div className="relative inline-block w-full pb-3">
-                  <div className="bg-white/95 backdrop-blur-xs px-5 pt-4 pb-3 rounded-[22px] rounded-bl-[4px] shadow-[0_1px_3px_rgba(0,0,0,0.06)] border border-slate-100/80 hover:shadow-md transition-shadow">
-                    <p className="text-slate-900 text-[16px] sm:text-[17px] leading-[1.4] font-normal tracking-normal">
-                      {item.content?.text}
+                  <div className="bg-white/95 backdrop-blur-xs px-5 pt-4 pb-3 rounded-[22px] rounded-bl-[4px] shadow-[0_1px_4px_rgba(0,0,0,0.06)] border border-slate-100/90 hover:shadow-md transition-shadow">
+                    <p className="text-slate-800 text-[15px] sm:text-[16px] leading-[1.5] font-normal tracking-normal">
+                      {item.content.fullTextBefore}
+                      <mark className="bg-[#FDE047]/80 text-slate-900 font-semibold px-1 py-0.5 rounded-xs decoration-clone shadow-[0_1px_1px_rgba(0,0,0,0.03)]">
+                        {item.content.highlighted}
+                      </mark>
+                      {item.content.fullTextAfter}
                     </p>
-                    
-                    <div className="flex justify-end mt-1">
-                      <span className="text-[12px] text-slate-400/90 font-sans select-none">
-                        {item.content?.time}
+
+                    <div className="flex justify-end mt-1.5">
+                      <span className="text-[12px] text-slate-400 font-sans select-none">
+                        {item.content.time}
                       </span>
                     </div>
                   </div>
 
                   {/* Reaction Bubble on corner */}
-                  {item.content?.hasReaction && (
+                  {item.content.reaction && (
                     <div className="absolute -bottom-1 left-3 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.1)] rounded-full w-8 h-8 flex items-center justify-center border border-slate-100 select-none">
-                      <span className="text-[14px]">❤️</span>
+                      <span className="text-[14px]">{item.content.reaction}</span>
                     </div>
                   )}
                 </div>
               ) : (
-                <img 
-                  src={item.src} 
-                  alt="Opinia członka Klubu" 
-                  className="w-full h-auto rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] border border-slate-100/80 hover:scale-[1.01] transition-transform duration-300"
-                />
+                <div className="relative group overflow-hidden rounded-2xl shadow-[0_1px_4px_rgba(0,0,0,0.06)] border border-slate-100/90 bg-white">
+                  <img
+                    src={item.content.src}
+                    alt={item.content.alt}
+                    className="w-full h-auto rounded-2xl group-hover:scale-[1.01] transition-transform duration-300"
+                  />
+                </div>
               )}
             </div>
           ))}
