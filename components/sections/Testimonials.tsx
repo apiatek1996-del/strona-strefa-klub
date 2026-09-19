@@ -25,16 +25,16 @@ const Testimonials = () => {
     {
       type: "image",
       content: {
-        src: "/testimonials/t_zlota_taca.jpg",
+        src: "/testimonials/t_zlota_taca_clean.jpg",
         alt: "Opinia członka Klubu: Treści zaserwowane na złotej tacy to bomba!",
       },
     },
     {
       type: "text",
       content: {
-        fullTextBefore: "Holi! Mam bardzo pozytywne odczucia, naprawdę! ",
-        highlighted: "Kiedy mam do czynienia z hiszpańskim na co dzień, to czuję się pewniej czytając, słuchając, mówiąc i pisząc",
-        fullTextAfter: ", także dla mnie ekstra!",
+        fullTextBefore: "Kiedy mam kontakt z hiszpańskim na co dzień, to ",
+        highlighted: "czuję się dużo pewniej czytając, słuchając, mówiąc i pisząc",
+        fullTextAfter: ". Dla mnie ekstra! ❤️",
         text: "",
         time: "09:15",
         reaction: "❤️",
@@ -50,8 +50,8 @@ const Testimonials = () => {
     {
       type: "text",
       content: {
-        fullTextBefore: "Ogólnie bardzo podoba mi się forma codziennego przypominania o sobie w stylu: ",
-        highlighted: "hejka, tu hiszpański, pamiętasz uczyć się nowych rzeczy codziennie i robić powtórki? 😂",
+        fullTextBefore: "Super forma codziennego przypomnienia: ",
+        highlighted: "hejka, tu hiszpański, pamiętasz uczyć się codziennie i robić powtórki? 😂",
         fullTextAfter: "",
         text: "",
         time: "14:40",
@@ -68,9 +68,9 @@ const Testimonials = () => {
     {
       type: "text",
       content: {
-        fullTextBefore: "Dla mnie zawsze cenne są takie rzeczy „z życia”, czyli np. jak było z tym sin permiso albo pegar albo en nada, bo ",
-        highlighted: "to pokazuje, że ten hiszpański naprawdę żyje i dużo fajnych rzeczy się w nim dzieje",
-        fullTextAfter: " 😀",
+        fullTextBefore: "Najcenniejsze są rzeczy „z życia” – ",
+        highlighted: "to pokazuje, że ten hiszpański naprawdę żyje",
+        fullTextAfter: " i dużo fajnych rzeczy się w nim dzieje 😀",
         text: "",
         time: "16:05",
         reaction: "✨",
@@ -86,9 +86,9 @@ const Testimonials = () => {
     {
       type: "text",
       content: {
-        fullTextBefore: "Tematycznie też jest ciekawie, ",
-        highlighted: "żadnych zbędnych zdań z książek",
-        fullTextAfter: " oraz są takie rzeczy dodatkowe... Potrafisz zaciekawić, nawet ten temat z modą przyjemnie się analizowało, pomimo że to nie moja pasja! 👏",
+        fullTextBefore: "Tematycznie rewelacja, ",
+        highlighted: "żadnych zbędnych zdań ze starych podręczników",
+        fullTextAfter: "! Potrafisz autentycznie zaciekawić 👏",
         text: "",
         time: "17:43",
         reaction: "👏",
@@ -111,9 +111,9 @@ const Testimonials = () => {
     {
       type: "text",
       content: {
-        fullTextBefore: "Jeśli mam być szczery to nie wiem jak, ale faktycznie ",
-        highlighted: "jest to jedyny kanał do którego cały czas zaglądam",
-        fullTextAfter: ". Więc motywuje... ten klub autentycznie ma duży potencjał. A co do samego klubu: wad nie stwierdzono! 😃",
+        fullTextBefore: "Faktycznie ",
+        highlighted: "jest to jedyny kanał, do którego cały czas zaglądam",
+        fullTextAfter: ". A co do samego Klubu: wad nie stwierdzono! 😃",
         text: "",
         time: "18:12",
         reaction: "❤️",
@@ -129,9 +129,9 @@ const Testimonials = () => {
     {
       type: "text",
       content: {
-        fullTextBefore: "Takie ",
-        highlighted: "małe dawki są najlepsze, bo szybko wchodzą do głowy i nie nudzą",
-        fullTextAfter: ". Każdego dnia nowa, konkretna porcja wiedzy, która nie przytłacza!",
+        fullTextBefore: "",
+        highlighted: "Małe dawki są najlepsze, bo szybko wchodzą do głowy i nie nudzą",
+        fullTextAfter: ". Konkretna porcja wiedzy każdego dnia bez przytłoczenia! 🔥",
         text: "",
         time: "11:24",
         reaction: "🔥",
