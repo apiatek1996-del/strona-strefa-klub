@@ -81,11 +81,18 @@ const Testimonials = () => {
       },
     },
     {
+      type: "image",
+      content: {
+        src: "/testimonials/ig_review.jpg",
+        alt: "Opinia na Instagramie: mieszkam w Hiszpanii i zawsze znajduję nowe wyrażenia",
+      },
+    },
+    {
       type: "text",
       content: {
         fullTextBefore: "Jeśli mam być szczery to nie wiem jak, ale faktycznie ",
         highlighted: "jest to jedyny kanał do którego cały czas zaglądam",
-        fullTextAfter: ". Więc motywuje... ten klub autentycznie ma duży potencjał 😃",
+        fullTextAfter: ". Więc motywuje... ten klub autentycznie ma duży potencjał. A co do samego klubu: wad nie stwierdzono! 😃",
         text: "",
         time: "18:12",
         reaction: "❤️",
