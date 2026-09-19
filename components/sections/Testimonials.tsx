@@ -1,63 +1,141 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
-interface ScreenshotItem {
+interface TextTestimonial {
+  text: string;
+  highlighted: string; // Key phrase to emphasize
+  fullTextBefore: string;
+  fullTextAfter: string;
+  time: string;
+  reaction?: string;
+}
+
+interface ImageTestimonial {
   src: string;
   alt: string;
 }
 
-const Testimonials = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+type TestimonialItem = 
+  | { type: "text"; content: TextTestimonial }
+  | { type: "image"; content: ImageTestimonial };
 
-  const screenshots: ScreenshotItem[] = [
+const Testimonials = () => {
+  const testimonials: TestimonialItem[] = [
     {
-      src: "/testimonials/div_ig_story_reply.jpg",
-      alt: "Opinia na Instagram Story: Treści zaserwowane na złotej tacy to bomba!",
+      type: "image",
+      content: {
+        src: "/testimonials/t_zlota_taca_clean.jpg",
+        alt: "Opinia członka Klubu: Treści zaserwowane na złotej tacy to bomba!",
+      },
     },
     {
-      src: "/testimonials/div_ig_gosia_chat.jpg",
-      alt: "Opinia z czatu Instagram (Gosia): Super alternatywa do Instagrama, konkretne wybrane treści",
+      type: "text",
+      content: {
+        fullTextBefore: "Kiedy mam kontakt z hiszpańskim na co dzień, to ",
+        highlighted: "czuję się dużo pewniej czytając, słuchając, mówiąc i pisząc",
+        fullTextAfter: ". Dla mnie ekstra! ❤️",
+        text: "",
+        time: "09:15",
+        reaction: "❤️",
+      },
     },
     {
-      src: "/testimonials/clean_ig_review.jpg",
-      alt: "Opinia z komentarzy Instagram: Mieszkam w Hiszpanii i zawsze znajduję nowe wyrażenia",
+      type: "image",
+      content: {
+        src: "/testimonials/t_warto_placic.jpg",
+        alt: "Opinia członka Klubu: Polecam spróbować nawet na miesiąc, warto!",
+      },
     },
     {
-      src: "/testimonials/div_underlined_warto.jpg",
-      alt: "Opinia: Polecam spróbować nawet na miesiąc, tu serio jest motywacja, warto zapłacić",
+      type: "text",
+      content: {
+        fullTextBefore: "Super forma codziennego przypomnienia: ",
+        highlighted: "hejka, tu hiszpański, pamiętasz uczyć się codziennie i robić powtórki? 😂",
+        fullTextAfter: "",
+        text: "",
+        time: "14:40",
+        reaction: "🔥",
+      },
     },
     {
-      src: "/testimonials/div_white_opcja_premium.jpg",
-      alt: "Opinia: Rano wstaję i sprawdzam czy coś jest, opcję premium najdroższą poproszę!",
+      type: "image",
+      content: {
+        src: "/testimonials/ig_review.jpg",
+        alt: "Opinia na Instagramie: mieszkam w Hiszpanii i zawsze znajduję nowe wyrażenia",
+      },
     },
     {
-      src: "/testimonials/div_white_pewnosc.jpg",
-      alt: "Opinia: Na co dzień czuję się pewniej czytając, słuchając, mówiąc i pisząc",
+      type: "text",
+      content: {
+        fullTextBefore: "Najcenniejsze są rzeczy „z życia” – ",
+        highlighted: "to pokazuje, że ten hiszpański naprawdę żyje",
+        fullTextAfter: " i dużo fajnych rzeczy się w nim dzieje 😀",
+        text: "",
+        time: "16:05",
+        reaction: "✨",
+      },
     },
     {
-      src: "/testimonials/div_white_przypominajka.jpg",
-      alt: "Opinia: Podoba mi się forma przypominania: hejka, tu hiszpański!",
+      type: "image",
+      content: {
+        src: "/testimonials/t11.jpg",
+        alt: "Opinia członka Klubu: Fajnie tak każdego dnia coś poczytać/odsłuchać",
+      },
     },
     {
-      src: "/testimonials/div_white_rzeczy_z_zycia.jpg",
-      alt: "Opinia: Cenne są rzeczy z życia, pokazuje że ten hiszpański naprawdę żyje",
+      type: "text",
+      content: {
+        fullTextBefore: "Tematycznie rewelacja, ",
+        highlighted: "żadnych zbędnych zdań ze starych podręczników",
+        fullTextAfter: "! Potrafisz autentycznie zaciekawić 👏",
+        text: "",
+        time: "17:43",
+        reaction: "👏",
+      },
     },
     {
-      src: "/testimonials/div_white_bez_ksiazek.jpg",
-      alt: "Opinia: Żadnych zbędnych zdań z książek, potrafisz autentycznie zaciekawić",
+      type: "image",
+      content: {
+        src: "/testimonials/t_gosia_clean.jpg",
+        alt: "Opinia członka Klubu (Gosia): Super alternatywa do Instagrama, konkretne wybrane treści",
+      },
     },
     {
-      src: "/testimonials/div_white_nadrobilam.jpg",
-      alt: "Opinia: Fajnie tak każdego dnia coś poczytać i odsłuchać",
+      type: "image",
+      content: {
+        src: "/testimonials/t_opcja_premium_najdrozsza.jpg",
+        alt: "Opinia członka Klubu: Rano wstaję i sprawdzam, więc opcję premium poproszę. Najdroższą!",
+      },
     },
     {
-      src: "/testimonials/div_white_polecam.jpg",
-      alt: "Opinia: Bardzo dobrze mi się z Tobą pracuje i zawsze Cię polecam",
+      type: "text",
+      content: {
+        fullTextBefore: "Faktycznie ",
+        highlighted: "jest to jedyny kanał, do którego cały czas zaglądam",
+        fullTextAfter: ". A co do samego Klubu: wad nie stwierdzono! 😃",
+        text: "",
+        time: "18:12",
+        reaction: "❤️",
+      },
     },
     {
-      src: "/testimonials/div_white_nie_wyobrazam.jpg",
-      alt: "Opinia: Ja nie wyobrażam sobie nie zostać na kanale",
+      type: "image",
+      content: {
+        src: "/testimonials/t1.jpg",
+        alt: "Opinia członka Klubu: Ja nie wyobrażam sobie nie zostać",
+      },
+    },
+    {
+      type: "text",
+      content: {
+        fullTextBefore: "",
+        highlighted: "Małe dawki są najlepsze, bo szybko wchodzą do głowy i nie nudzą",
+        fullTextAfter: ". Konkretna porcja wiedzy każdego dnia bez przytłoczenia! 🔥",
+        text: "",
+        time: "11:24",
+        reaction: "🔥",
+      },
     },
   ];
 
@@ -72,9 +150,9 @@ const Testimonials = () => {
             Co mówią członkowie <span className="text-primary">Klubu?</span>
           </h2>
           <p className="text-lg text-slate-600 mb-8">
-            Prawdziwe, nieedytowane zrzuty ekranu od osób, które są w Klubie każdego dnia.
+            Prawdziwe głosy osób, które są w Klubie każdego dnia.
           </p>
-          <div className="inline-flex items-center gap-3 bg-white/70 backdrop-blur-sm px-5 py-2.5 rounded-full border border-orange-100 text-sm text-slate-600 shadow-sm">
+          <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-orange-100 text-sm text-slate-600 shadow-sm">
             <span className="w-5 h-5 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center">
               i
             </span>
@@ -84,56 +162,49 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Masonry grid with pure cropped screenshot cards */}
+        {/* Masonry grid */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {screenshots.map((item, index) => (
-            <div
-              key={index}
-              className="break-inside-avoid cursor-pointer group"
-              onClick={() => setSelectedImage(item.src)}
-            >
-              <div className="relative overflow-hidden rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.06)] border border-slate-200/80 bg-white transition-all duration-300 group-hover:shadow-xl group-hover:scale-[1.015] group-hover:border-primary/30">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  loading="lazy"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-                
-                {/* Subtle zoom indicator on hover */}
-                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 backdrop-blur-xs text-white p-2 rounded-full shadow">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-                  </svg>
+          {testimonials.map((item, index) => (
+            <div key={index} className="break-inside-avoid">
+              {item.type === "text" ? (
+                /* Authentic Chat Bubble with Key Highlight */
+                <div className="relative inline-block w-full pb-3">
+                  <div className="bg-white/95 backdrop-blur-xs px-5 pt-4 pb-3 rounded-[22px] rounded-bl-[4px] shadow-[0_1px_4px_rgba(0,0,0,0.06)] border border-slate-100/90 hover:shadow-md transition-shadow">
+                    <p className="text-slate-800 text-[15px] sm:text-[16px] leading-[1.5] font-normal tracking-normal">
+                      {item.content.fullTextBefore}
+                      <mark className="bg-[#FDE047]/80 text-slate-900 font-semibold px-1 py-0.5 rounded-xs decoration-clone shadow-[0_1px_1px_rgba(0,0,0,0.03)]">
+                        {item.content.highlighted}
+                      </mark>
+                      {item.content.fullTextAfter}
+                    </p>
+
+                    <div className="flex justify-end mt-1.5">
+                      <span className="text-[12px] text-slate-400 font-sans select-none">
+                        {item.content.time}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Reaction Bubble on corner */}
+                  {item.content.reaction && (
+                    <div className="absolute -bottom-1 left-3 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.1)] rounded-full w-8 h-8 flex items-center justify-center border border-slate-100 select-none">
+                      <span className="text-[14px]">{item.content.reaction}</span>
+                    </div>
+                  )}
                 </div>
-              </div>
+              ) : (
+                <div className="relative group overflow-hidden rounded-2xl shadow-[0_1px_4px_rgba(0,0,0,0.06)] border border-slate-100/90 bg-white">
+                  <img
+                    src={item.content.src}
+                    alt={item.content.alt}
+                    className="w-full h-auto rounded-2xl group-hover:scale-[1.01] transition-transform duration-300"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
-
-      {/* Lightbox / Zoom modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden p-2 shadow-2xl">
-            <img
-              src={selectedImage}
-              alt="Powiększona opinia"
-              className="max-h-[82vh] w-auto mx-auto object-contain rounded-xl"
-            />
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-black/60 hover:bg-black text-white w-9 h-9 rounded-full flex items-center justify-center text-xl font-bold transition-colors"
-              aria-label="Zamknij podgląd"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
