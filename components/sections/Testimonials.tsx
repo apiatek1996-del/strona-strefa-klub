@@ -23,6 +23,13 @@ type TestimonialItem =
 const Testimonials = () => {
   const testimonials: TestimonialItem[] = [
     {
+      type: "image",
+      content: {
+        src: "/testimonials/t_zlota_taca.jpg",
+        alt: "Opinia członka Klubu: Treści zaserwowane na złotej tacy to bomba!",
+      },
+    },
+    {
       type: "text",
       content: {
         fullTextBefore: "Holi! Mam bardzo pozytywne odczucia, naprawdę! ",
@@ -31,6 +38,13 @@ const Testimonials = () => {
         text: "",
         time: "09:15",
         reaction: "❤️",
+      },
+    },
+    {
+      type: "image",
+      content: {
+        src: "/testimonials/t_warto_placic.jpg",
+        alt: "Opinia członka Klubu: Polecam spróbować nawet na miesiąc, warto!",
       },
     },
     {
@@ -47,15 +61,8 @@ const Testimonials = () => {
     {
       type: "image",
       content: {
-        src: "/testimonials/t1.jpg",
-        alt: "Opinia członka Klubu: Ja nie wyobrażam sobie nie zostać",
-      },
-    },
-    {
-      type: "image",
-      content: {
-        src: "/testimonials/t_warto_placic.jpg",
-        alt: "Opinia członka Klubu: Polecam spróbować nawet na miesiąc, warto!",
+        src: "/testimonials/ig_review.jpg",
+        alt: "Opinia na Instagramie: mieszkam w Hiszpanii i zawsze znajduję nowe wyrażenia",
       },
     },
     {
@@ -90,8 +97,8 @@ const Testimonials = () => {
     {
       type: "image",
       content: {
-        src: "/testimonials/ig_review.jpg",
-        alt: "Opinia na Instagramie: mieszkam w Hiszpanii i zawsze znajduję nowe wyrażenia",
+        src: "/testimonials/t_lepiej_niz_insta.jpg",
+        alt: "Opinia członka Klubu: Z wiadomościami działa to dużo lepiej niż posty na insta",
       },
     },
     {
@@ -106,25 +113,10 @@ const Testimonials = () => {
       },
     },
     {
-      type: "text",
+      type: "image",
       content: {
-        fullTextBefore: "Hej, śledzę na bieżąco i super że treści znikają, bo tak daje to motywację do regularności. W przypadku postów na social mediach nie widziałam nic haha, a ",
-        highlighted: "z takimi wiadomościami to działa dużo lepiej!",
-        fullTextAfter: "",
-        text: "",
-        time: "13:40",
-        reaction: "🚀",
-      },
-    },
-    {
-      type: "text",
-      content: {
-        fullTextBefore: "Zaglądam na kanał codziennie... Odkąd pojawiły się u Ciebie te skróty i zwroty, ",
-        highlighted: "widzę je teraz coraz częściej w hiszpańskich wiadomościach i od razu wiem o co chodzi!",
-        fullTextAfter: "",
-        text: "",
-        time: "17:02",
-        reaction: "💡",
+        src: "/testimonials/t1.jpg",
+        alt: "Opinia członka Klubu: Ja nie wyobrażam sobie nie zostać",
       },
     },
     {
