@@ -10,7 +10,7 @@ const Navbar = () => {
             <span className="flex h-8 w-8 md:h-10 md:w-10 items-center justify-center text-primary">
               <MessageCircle size={28} className="md:w-8 md:h-8" />
             </span>
-            Strefa Hiszpański
+            Klub HTD
           </Link>
         </div>
 

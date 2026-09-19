@@ -14,7 +14,7 @@ const Features = () => {
     {
       num: "02",
       title: "Bez zeszytu i bez siadania",
-      description: "Cała Strefa działa z telefonu. W kolejce, w autobusie, przy kawie. Nie potrzebujesz biurka, ciszy ani „trybu skupienia” — bo gdybyś na to czekała, nie zrobiłabyś tego ani razu w tym miesiącu.",
+      description: "Cały Klub działa z telefonu. W kolejce, w autobusie, przy kawie. Nie potrzebujesz biurka, ciszy ani „trybu skupienia” — bo gdybyś na to czekała, nie zrobiłabyś tego ani razu w tym miesiącu.",
       icon: <Smartphone className="w-6 h-6 text-primary" />,
       tag: "Wygoda"
     },

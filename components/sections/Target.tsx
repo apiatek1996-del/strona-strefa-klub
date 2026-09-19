@@ -14,7 +14,7 @@ const Target = () => {
             <span>Kwalifikacja</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-slate-900 leading-tight" style={{ fontFamily: 'var(--font-lora), serif' }}>
-            Czy Strefa jest dla Ciebie?
+            Czy Klub HTD jest dla Ciebie?
           </h2>
           <p className="text-slate-600 text-base sm:text-lg mt-3">
             Sprawdź szczerze, czy to format, który przyniesie Ci realne efekty.
@@ -82,7 +82,7 @@ const Target = () => {
 
             <div className="mt-8 pt-6 border-t border-slate-200/60">
               <p className="text-xs text-slate-400 leading-relaxed">
-                Jestem z Tobą szczera: Strefa ma uzupełniać Twoją naukę i dawać żywy kontakt z językiem, a nie obiecywać cuda bez zaangażowania.
+                Jestem z Tobą szczera: Klub ma uzupełniać Twoją naukę i dawać żywy kontakt z językiem, a nie obiecywać cuda bez zaangażowania.
               </p>
             </div>
           </div>

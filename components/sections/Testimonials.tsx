@@ -57,7 +57,7 @@ const Testimonials = () => {
             Co mówią członkowie <span className="text-primary">Klubu?</span>
           </h2>
           <p className="text-lg text-slate-600 mb-8">
-            Prawdziwe głosy osób, które są w Strefie każdego dnia.
+            Prawdziwe głosy osób, które są w Klubie każdego dnia.
           </p>
           <div className="inline-flex items-center gap-3 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border border-orange-100 text-sm text-slate-500 shadow-sm">
             <span className="text-primary font-bold">i</span>

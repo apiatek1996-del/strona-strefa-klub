@@ -16,8 +16,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Strefa Hiszpański | Twoja platforma do nauki hiszpańskiego",
-  description: "Zacznij mówić po hiszpańsku płynnie i bez stresu dzięki naszej nowoczesnej platformie dla społeczności.",
+  title: "Klub HTD | Hiszpański Todos los Días z Agatą Piątek",
+  description: "Codzienna porcja żywego i przydatnego hiszpańskiego prosto na Twój telefon.",
 };
 
 export default function RootLayout({

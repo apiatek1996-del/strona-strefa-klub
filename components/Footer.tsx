@@ -43,7 +43,7 @@ const Footer = () => {
 
         {/* Dolny pasek */}
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© 2026 Agata Piątek · Strefa Hiszpański</p>
+          <p>© 2026 Agata Piątek · Klub Hiszpański Todos los Días (HTD)</p>
           <div className="flex gap-6">
             <Link href="/polityka-prywatnosci" className="hover:text-slate-300 transition-colors">
               Polityka prywatności

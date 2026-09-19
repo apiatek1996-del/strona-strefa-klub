@@ -25,7 +25,7 @@ const Pricing = () => {
           <div className="absolute -top-10 -right-4 sm:-right-8 z-20 w-24 sm:w-32 rotate-12 hover:rotate-3 transition-transform duration-300 pointer-events-none drop-shadow-xl">
             <img 
               src="/strefa_mockup_v4.png" 
-              alt="Strefa Hiszpański w telefonie" 
+              alt="Klub Hiszpański Todos los Días w telefonie" 
               className="w-full h-auto"
             />
           </div>
@@ -45,7 +45,6 @@ const Pricing = () => {
             {[
               "Codzienne wyrażenie od poniedziałku do piątku z dogłębną analizą",
               "Archiwum ponad 400 wpisów — dostęp od pierwszego dnia",
-              '„Zasłyszane na ulicy” — fragmenty prawdziwych rozmów z Hiszpanii',
               "Ściągawki do pobrania — gramatyka wytłumaczona logicznie, gotowa do użycia",
               "Forum i tandem językowy",
               "Możliwość zadawania pytań pod każdym postem",
@@ -69,7 +68,7 @@ const Pricing = () => {
             onClick={() => {
               if (typeof window !== "undefined" && (window as any).fbq) {
                 (window as any).fbq('track', 'InitiateCheckout', {
-                  content_name: 'Strefa Hiszpański',
+                  content_name: 'Klub Hiszpański Todos los Días',
                   value: 59.00,
                   currency: 'PLN'
                 });
@@ -77,7 +76,7 @@ const Pricing = () => {
             }}
             className="flex items-center justify-center gap-2 w-full rounded-full py-5 text-center text-lg font-bold bg-[#FFC529] border-2 border-slate-900 text-slate-950 shadow-md hover:bg-[#FFD043] hover:-translate-y-1 transition-all"
           >
-            DOŁĄCZAM DO STREFY
+            DOŁĄCZAM DO KLUBU
             <ArrowRight className="w-5 h-5 text-slate-900" />
           </Link>
         </div>

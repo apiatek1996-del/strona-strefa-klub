@@ -8,19 +8,19 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Dla jakiego poziomu jest Strefa?",
-      answer: "Od A1+ do B2. Jeśli znasz absolutne podstawy — potrafisz przeczytać proste zdanie i rozpoznać czasy — będziesz miała z czego korzystać. Jeśli zaczynasz od zera, najpierw potrzebujesz kursu podstaw, a Strefa ma sens dopiero potem."
+      question: "Dla jakiego poziomu jest Klub HTD?",
+      answer: "Od A1+ do B2. Jeśli znasz absolutne podstawy — potrafisz przeczytać proste zdanie i rozpoznać czasy — będziesz miała z czego korzystać. Jeśli zaczynasz od zera, najpierw potrzebujesz kursu podstaw, a Klub ma sens dopiero potem."
     },
     {
-      question: "Czy Strefa zastępuje kurs językowy?",
-      answer: "Nie. Kurs uczy Cię systemu — gramatyki, struktur, kolejności. Strefa daje Ci to, czego kurs nie da: żywy język, którym ludzie faktycznie mówią, i codzienny kontakt między zajęciami. To dwie różne rzeczy, które razem działają najlepiej."
+      question: "Czy Klub zastępuje kurs językowy?",
+      answer: "Nie. Kurs uczy Cię systemu — gramatyki, struktur, kolejności. Klub daje Ci to, czego kurs nie da: żywy język, którym ludzie faktycznie mówią, i codzienny kontakt między zajęciami. To dwie różne rzeczy, które razem działają najlepiej."
     },
     {
       question: "Co dostaję jako bonus?",
-      answer: `Poza codziennym wyrażeniem dostajesz: „Zasłyszane na ulicy" — co ciekawsze fragmenty rozmów, które słyszę w Hiszpanii i relacjonuję Wam na bieżąco; ściągawki do pobrania — gramatyka wytłumaczona logicznie, gotowa do użycia, do wydrukowania albo trzymania w telefonie; 15 promptów do AI (wartość 97 zł) — gotowe instrukcje, dzięki którym ChatGPT staje się partnerem do ćwiczenia hiszpańskiego, a nie tylko tłumaczem; dostęp do forum — możesz znaleźć tam osobę do ćwiczenia, czyli tandem językowy; archiwum ponad 400 wpisów — masz do niego dostęp od pierwszego dnia.`
+      answer: `Poza codziennym wyrażeniem dostajesz: ściągawki do pobrania — gramatyka wytłumaczona logicznie, gotowa do użycia, do wydrukowania albo trzymania w telefonie; 15 promptów do AI (wartość 97 zł) — gotowe instrukcje, dzięki którym ChatGPT staje się partnerem do ćwiczenia hiszpańskiego, a nie tylko tłumaczem; dostęp do forum — możesz znaleźć tam osobę do ćwiczenia, czyli tandem językowy; archiwum ponad 400 wpisów — masz do niego dostęp od pierwszego dnia.`
     },
     {
-      question: "Czy Strefa się rozwija?",
+      question: "Czy Klub się rozwija?",
       answer: "Tak. Wkrótce dochodzą krótkie podcasty na kilku poziomach, karty pracy do znanych seriali oraz kursy gramatyczne: Ogarnij podstawy, Ogarnij czasy przeszłe, Ogarnij subjuntivo i Mów jak Hiszpan. Dołączając teraz, masz do nich dostęp bez dopłaty, kiedy się pojawią."
     },
     {
@@ -37,7 +37,7 @@ const FAQ = () => {
     },
     {
       question: "Co jeśli mam pytanie do konkretnego wyrażenia?",
-      answer: "Piszesz pod postem, odpowiadam osobiście. To jest część Strefy, nie dodatek."
+      answer: "Piszesz pod postem, odpowiadam osobiście. To jest część Klubu, nie dodatek."
     }
   ];
 

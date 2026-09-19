@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="bg-secondary pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden relative">
+    <section className="bg-secondary pt-12 pb-16 lg:pt-16 lg:pb-24 overflow-hidden relative">
       {/* Decorative background shapes */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
@@ -21,7 +21,7 @@ const Hero = () => {
                 <rect width="750" height="250" y="125" fill="#ffc400"/>
                 <path d="M145,150 a45,65 0 1,0 90,0 a45,65 0 1,0 -90,0" fill="#c60b1e" transform="translate(45,0) scale(0.6)"/>
               </svg>
-              Ekosystem do samodzielnej nauki
+              Klub Hiszpański Todos los Días
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-black tracking-tight mb-6 leading-[1.1]" style={{ fontFamily: 'var(--font-lora), serif' }}>
@@ -60,7 +60,7 @@ const Hero = () => {
               <div className="relative z-10 transform -rotate-2 hover:rotate-0 transition-transform duration-700">
                 <img 
                   src="/strefa_mockup_v4.png" 
-                  alt="Strefa Hiszpański Platforma" 
+                  alt="Klub Hiszpański Todos los Días" 
                   className="w-full h-auto drop-shadow-2xl rounded-2xl"
                 />
               </div>
@@ -73,6 +73,23 @@ const Hero = () => {
           </div>
 
         </div>
+
+        {/* Wyróżniona opinia pod Hero (Oryginalny screen Petarda) */}
+        <div className="mt-12 pt-8 border-t border-purple-300/40 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-4 bg-white/70 backdrop-blur-xs px-4 py-1.5 rounded-full text-xs font-bold text-slate-800 border border-white/90 shadow-2xs">
+            <span>💥</span>
+            <span>100% autentyczna opinia klubowiczki z Telegrama</span>
+          </div>
+          
+          <div className="w-full max-w-sm sm:max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white hover:scale-[1.01] transition-transform duration-300">
+            <img 
+              src="/testimonials/t4.jpg" 
+              alt="Opinia klubowiczki: To istna petarda!" 
+              className="w-full h-auto block"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );

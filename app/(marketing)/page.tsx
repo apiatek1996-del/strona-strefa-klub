@@ -39,7 +39,7 @@ export default function Home() {
                 <ul className="space-y-4">
                   {[
                     "Włączasz serial i łapiesz żart, który dziś by Ci uciekł.",
-                    "Słyszysz rozmowę na ulicy i myślisz: o, to znam ze Strefy.",
+                    "Słyszysz rozmowę na ulicy i myślisz: o, to znam z Klubu.",
                     "Rzucasz coś w rozmowie i sama się dziwisz, że tak Ci wyszło.",
                   ].map((text, i) => (
                     <li key={i} className="flex items-start gap-4">
@@ -63,7 +63,7 @@ export default function Home() {
                 <div className="relative w-full h-full rounded-full border-8 border-white shadow-2xl overflow-hidden z-10">
                   <img 
                     src="/Ogarnij Hiszpański.jpg" 
-                    alt="Agata - Zapraszam Cię do Strefy!" 
+                    alt="Agata - Zapraszam Cię do Klubu!" 
                     className="w-full h-full object-cover scale-110"
                   />
                 </div>
