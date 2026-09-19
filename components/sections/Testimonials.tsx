@@ -102,6 +102,13 @@ const Testimonials = () => {
       },
     },
     {
+      type: "image",
+      content: {
+        src: "/testimonials/t_opcja_premium_najdrozsza.jpg",
+        alt: "Opinia członka Klubu: Rano wstaję i sprawdzam, więc opcję premium poproszę. Najdroższą!",
+      },
+    },
+    {
       type: "text",
       content: {
         fullTextBefore: "Jeśli mam być szczery to nie wiem jak, ale faktycznie ",
