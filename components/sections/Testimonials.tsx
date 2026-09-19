@@ -52,6 +52,13 @@ const Testimonials = () => {
       },
     },
     {
+      type: "image",
+      content: {
+        src: "/testimonials/t_warto_placic.jpg",
+        alt: "Opinia członka Klubu: Polecam spróbować nawet na miesiąc, warto!",
+      },
+    },
+    {
       type: "text",
       content: {
         fullTextBefore: "Dla mnie zawsze cenne są takie rzeczy „z życia”, czyli np. jak było z tym sin permiso albo pegar albo en nada, bo ",
