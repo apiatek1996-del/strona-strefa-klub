@@ -63,7 +63,7 @@ const LessonExample = () => {
     },
   ];
 
-  // Automatyczne przesuwanie slajdów w lewo co 5 sekund (pauzowane po najechaniu myszką)
+  // Automatyczne przesuwanie slajdów co 5 sekund (pauzowane po najechaniu myszką)
   useEffect(() => {
     if (isPaused) return;
 
@@ -113,19 +113,15 @@ const LessonExample = () => {
           </p>
         </div>
 
-        {/* Karuzela przesuwana w lewo */}
+        {/* Karuzela z dynamiczną wysokością - brak pustych przestrzeni */}
         <div
-          className="relative overflow-hidden rounded-3xl"
+          className="relative rounded-3xl transition-all duration-300"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-
-            {/* SLAJD 1: Post AVANZAR */}
-            <div className="w-full shrink-0 px-1">
+          {/* SLAJD 1: Post AVANZAR */}
+          {currentIndex === 0 && (
+            <div className="w-full animate-fadeIn transition-opacity duration-500">
               <div className="bg-white rounded-3xl shadow-md border border-slate-200/80 p-5 sm:p-7">
                 <div className="flex items-center justify-between gap-3 mb-5 pb-4 border-b border-slate-100">
                   <div className="flex items-center gap-3">
@@ -181,9 +177,11 @@ const LessonExample = () => {
                 📍 {slides[0].caption}
               </p>
             </div>
+          )}
 
-            {/* SLAJD 2: Rolka COMPLICADO */}
-            <div className="w-full shrink-0 px-1">
+          {/* SLAJD 2: Rolka COMPLICADO */}
+          {currentIndex === 1 && (
+            <div className="w-full animate-fadeIn transition-opacity duration-500">
               <div className="bg-white rounded-3xl shadow-md border border-slate-200/80 p-5 sm:p-7">
                 <div className="inline-block bg-purple-50 text-purple-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
                   {slides[1].tag}
@@ -207,9 +205,11 @@ const LessonExample = () => {
                 🎬 {slides[1].caption}
               </p>
             </div>
+          )}
 
-            {/* SLAJD 3: Książka + Audio */}
-            <div className="w-full shrink-0 px-1">
+          {/* SLAJD 3: Książka + Audio */}
+          {currentIndex === 2 && (
+            <div className="w-full animate-fadeIn transition-opacity duration-500">
               <div className="bg-white rounded-3xl shadow-md border border-slate-200/80 p-5 sm:p-7">
                 <div className="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
                   {slides[2].tag}
@@ -224,9 +224,11 @@ const LessonExample = () => {
                 🎧 {slides[2].caption}
               </p>
             </div>
+          )}
 
-            {/* SLAJD 4: LA CAGUÉ */}
-            <div className="w-full shrink-0 px-1">
+          {/* SLAJD 4: LA CAGUÉ */}
+          {currentIndex === 3 && (
+            <div className="w-full animate-fadeIn transition-opacity duration-500">
               <div className="bg-white rounded-3xl shadow-md border border-slate-200/80 p-5 sm:p-7">
                 <div className="inline-block bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
                   {slides[3].tag}
@@ -251,8 +253,7 @@ const LessonExample = () => {
                 💬 {slides[3].caption}
               </p>
             </div>
-
-          </div>
+          )}
         </div>
 
         {/* Wyśrodkowany pasek sterowania pod karuzelą */}
