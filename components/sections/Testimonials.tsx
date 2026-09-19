@@ -12,55 +12,51 @@ const Testimonials = () => {
 
   const screenshots: ScreenshotItem[] = [
     {
-      src: "/testimonials/clean_zlota_taca.jpg",
-      alt: "Opinia: Treści zaserwowane na złotej tacy z wytłumaczeniem to bomba!",
+      src: "/testimonials/div_ig_story_reply.jpg",
+      alt: "Opinia na Instagram Story: Treści zaserwowane na złotej tacy to bomba!",
     },
     {
-      src: "/testimonials/clean_pewnosc_codziennie.jpg",
-      alt: "Opinia: Na co dzień czuję się pewniej czytając, słuchając, mówiąc i pisząc",
-    },
-    {
-      src: "/testimonials/clean_warto_placic.jpg",
-      alt: "Opinia: Polecam spróbować nawet na miesiąc, tu serio jest motywacja, warto zapłacić",
-    },
-    {
-      src: "/testimonials/clean_przypominajka.jpg",
-      alt: "Opinia: Podoba mi się forma przypominania: hejka, tu hiszpański!",
-    },
-    {
-      src: "/testimonials/clean_gosia_insta.jpg",
-      alt: "Opinia (Gosia): Super alternatywa do Instagrama, skondensowane i wiadomo czego się uczyć",
-    },
-    {
-      src: "/testimonials/clean_rzeczy_z_zycia.jpg",
-      alt: "Opinia: Cenne są rzeczy z życia, pokazuje że ten hiszpański naprawdę żyje",
-    },
-    {
-      src: "/testimonials/clean_opcja_premium.jpg",
-      alt: "Opinia: Rano wstaję i sprawdzam czy coś jest, opcję premium najdroższą poproszę!",
+      src: "/testimonials/div_ig_gosia_chat.jpg",
+      alt: "Opinia z czatu Instagram (Gosia): Super alternatywa do Instagrama, konkretne wybrane treści",
     },
     {
       src: "/testimonials/clean_ig_review.jpg",
-      alt: "Opinia z Instagrama: Mieszkam w Hiszpanii i zawsze znajduję nowe wyrażenia",
+      alt: "Opinia z komentarzy Instagram: Mieszkam w Hiszpanii i zawsze znajduję nowe wyrażenia",
     },
     {
-      src: "/testimonials/clean_bez_ksiazek.jpg",
+      src: "/testimonials/div_underlined_warto.jpg",
+      alt: "Opinia: Polecam spróbować nawet na miesiąc, tu serio jest motywacja, warto zapłacić",
+    },
+    {
+      src: "/testimonials/div_white_opcja_premium.jpg",
+      alt: "Opinia: Rano wstaję i sprawdzam czy coś jest, opcję premium najdroższą poproszę!",
+    },
+    {
+      src: "/testimonials/div_white_pewnosc.jpg",
+      alt: "Opinia: Na co dzień czuję się pewniej czytając, słuchając, mówiąc i pisząc",
+    },
+    {
+      src: "/testimonials/div_white_przypominajka.jpg",
+      alt: "Opinia: Podoba mi się forma przypominania: hejka, tu hiszpański!",
+    },
+    {
+      src: "/testimonials/div_white_rzeczy_z_zycia.jpg",
+      alt: "Opinia: Cenne są rzeczy z życia, pokazuje że ten hiszpański naprawdę żyje",
+    },
+    {
+      src: "/testimonials/div_white_bez_ksiazek.jpg",
       alt: "Opinia: Żadnych zbędnych zdań z książek, potrafisz autentycznie zaciekawić",
     },
     {
-      src: "/testimonials/clean_jedyny_kanal.jpg",
-      alt: "Opinia: Jedyny kanał do którego cały czas zaglądam, ten klub ma duży potencjał",
-    },
-    {
-      src: "/testimonials/clean_lepiej_niz_insta.jpg",
-      alt: "Opinia: Z wiadomościami działa to dużo lepiej niż posty na insta",
-    },
-    {
-      src: "/testimonials/clean_t11_nadrobilam.jpg",
+      src: "/testimonials/div_white_nadrobilam.jpg",
       alt: "Opinia: Fajnie tak każdego dnia coś poczytać i odsłuchać",
     },
     {
-      src: "/testimonials/clean_t1_nie_wyobrazam.jpg",
+      src: "/testimonials/div_white_polecam.jpg",
+      alt: "Opinia: Bardzo dobrze mi się z Tobą pracuje i zawsze Cię polecam",
+    },
+    {
+      src: "/testimonials/div_white_nie_wyobrazam.jpg",
       alt: "Opinia: Ja nie wyobrażam sobie nie zostać na kanale",
     },
   ];
