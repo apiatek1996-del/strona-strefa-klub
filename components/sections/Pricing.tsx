@@ -31,7 +31,8 @@ const Pricing = () => {
           </div>
 
           <div className="mb-8 mt-4">
-            <div className="flex items-baseline gap-1 mb-2">
+            <div className="flex items-baseline gap-2 mb-2 flex-wrap">
+              <span className="text-2xl sm:text-3xl text-slate-400 line-through font-semibold">1220 zł</span>
               <span className="text-7xl font-black text-slate-900">59</span>
               <span className="text-2xl font-bold text-slate-900">zł</span>
               <span className="text-slate-500 font-medium ml-1">/ miesięcznie</span>
