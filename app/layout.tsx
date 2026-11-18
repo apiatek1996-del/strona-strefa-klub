@@ -16,8 +16,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Klub HTD | Hiszpański Todos los Días z Agatą Piątek",
-  description: "Codzienna porcja żywego i przydatnego hiszpańskiego prosto na Twój telefon.",
+  title: "Strefa Hiszpański | Poczuj się pewnie i bezpiecznie w hiszpańskim – Agata Piątek",
+  description: "Systematyczna nauka hiszpańskiego na Circle: codzienne rytuały z feedbackiem, 4 pełne kursy oraz codzienne analizy naturalnego hiszpańskiego.",
 };
 
 export default function RootLayout({
