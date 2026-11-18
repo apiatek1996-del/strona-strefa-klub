@@ -20,7 +20,21 @@ type TestimonialItem =
   | { type: "text"; content: TextTestimonial }
   | { type: "image"; content: ImageTestimonial };
 
-const Testimonials = () => {
+interface TestimonialsProps {
+  heading?: string;
+  highlight?: string;
+  subtitle?: string;
+  note?: string;
+  extraImages?: ImageTestimonial[];
+}
+
+const Testimonials = ({
+  heading = "Co mówią członkowie",
+  highlight = "Klubu?",
+  subtitle = "Prawdziwe głosy osób, które są w Klubie każdego dnia.",
+  note = "Część opinii pochodzi z czasu, gdy Klub startował na Telegramie (obecnie działamy na dedykowanej platformie!)",
+  extraImages = [],
+}: TestimonialsProps) => {
   const testimonials: TestimonialItem[] = [
     {
       type: "image",
@@ -147,24 +161,27 @@ const Testimonials = () => {
             className="text-3xl md:text-5xl font-heading font-bold tracking-normal text-slate-800 mb-6"
             style={{ fontFamily: "var(--font-lora), serif" }}
           >
-            Co mówią członkowie <span className="text-primary">Klubu?</span>
+            {heading} <span className="text-primary">{highlight}</span>
           </h2>
           <p className="text-lg text-slate-600 mb-8">
-            Prawdziwe głosy osób, które są w Klubie każdego dnia.
+            {subtitle}
           </p>
           <div className="inline-flex items-center gap-3 bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-orange-100 text-sm text-slate-600 shadow-sm">
             <span className="w-5 h-5 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center">
               i
             </span>
             <span>
-              Część opinii pochodzi z czasu, gdy Klub startował na Telegramie (obecnie działamy na dedykowanej platformie!)
+              {note}
             </span>
           </div>
         </div>
 
         {/* Masonry grid */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {testimonials.map((item, index) => (
+          {[
+            ...extraImages.map((img): TestimonialItem => ({ type: "image", content: img })),
+            ...testimonials,
+          ].map((item, index) => (
             <div key={index} className="break-inside-avoid">
               {item.type === "text" ? (
                 /* Authentic Chat Bubble with Key Highlight */
