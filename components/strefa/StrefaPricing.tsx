@@ -50,7 +50,7 @@ const StrefaPricing = () => {
               "📩 Mail co poniedziałek rano z planem tygodnia i zajawkami analiz",
               "🎙️ Wydarzenia na żywo (np. konwersacje) w Circle",
               "Archiwum ponad 250 analiz — dostęp od pierwszego dnia",
-              { bold: true, text: "🔥 BONUS: 15 promptów AI do ćwiczenia hiszpańskiego (wartość 97 zł)" },
+              { bold: true, text: "🔥 BONUS: 15 promptów AI do ćwiczenia hiszpańskiego" },
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
